@@ -1,7 +1,142 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
-
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
+<section id="profile">
+    <h1><i>Hello,</i> <span>I am Shienny!</span></h1>
+    <img src="images/circle-dark.png" width="100px" />
+    <div class="profile-info">
+        As a Full Stack Developer with expertise in C# and .NET, I’m a fast learner who focuses on creating clean, reusable code and building parameterized solutions that improve system flexibility and maintainability
+    </div>
+    <img src="images/profiles/profile1.jpg" width="300px" />
+    <button>DOWNLOAD CV</button>
+    <button>CONTACT ME</button>
+    <div class="gotolink">
+        <a href="#aboutme">Get to know me</a>
+        <img src="images/arrow-down.gif" width="32px" />
+    </div>
+</section>
+<section id="aboutme">
+    <h1>About Me</h1>
+    <img src="images/circle-dark.png" width="100px" />
+    <div class="container-info">
+        <img src="images/exp.png" width="32px" />
+        <br />
+        Experience
+        <br />
+        5+ Years
+        <br />
+        Fullstack Development
+    </div>
+    <div class="container-info">
+        <img src="images/edu.png" width="32px" />
+        <br />
+        Education
+        <br />
+        Bachelor of Informatics Engineering (S.Kom)
+        <br />
+        GPA 3.6/4.00 (Cum Laude)
+    </div>
+    <img src="images/profiles/profile2.jpg" width="300px" />
+    <div class="container-detail">
+        With over 5 years of experience in software development, including roles as a Software Engineer at PT Bank Mandiri Tbk and a .NET Developer at Freeport Indonesia, I specialize in creating scalable applications using the .NET Framework. I have successfully led projects, contributed to Go-Live applications, and optimized systems with parameterized solutions. Holding a Bachelor's Degree in Informatics Engineering, I am a fast learner, team player, and detail-oriented coder, passionate about developing user-friendly and secure applications that add value to businesses and customers.
+    </div>
+    <div class="gotolink">
+        <a href="#skills">Discover my skills</a>
+        <img src="images/arrow-down.gif" width="32px" />
+    </div>
+</section>
+<section id="skills">
+    <div class="skills-title">
+        <h1>Skills</h1>
+        <img src="images/doodle.png" width="200px" />
+    </div>
+    <div class="skills-chips">
+        <button>ALL</button>
+        <button>FRONT END</button>
+        <button>BACK END</button>
+        <button>DATABASE</button>
+        <button>VERSION CONTROL</button>
+        <button>SOFT SKILLS</button>
+    </div>
+    <InputText @bind-Value="searchSkill" />
+    <button>SEARCH</button>
+    <div class="skills-results">
+        <div class="skills-item">
+            <img src="images/verify.png" width="50px" />
+            <span class="skills-item-name">NET</span><br />
+            <span class="skills-item-status">Experienced</span>
+        </div>
+        <div class="skills-item">
+            <img src="images/verify.png" width="50px" />
+            <span class="skills-item-name">C#</span><br />
+            <span class="skills-item-status">Experienced</span>
+        </div>
+    </div>
+    <div class="gotolink">
+        <a href="#projects">Check out my projects</a>
+        <img src="images/arrow-down.gif" width="32px" />
+    </div>
+</section>
+<section id="projects">
+    <div class="projects-title">
+        <h1>Projects</h1>
+        <p>Here are some of the projects I worked on</p>
+        <img src="images/lines.png" width="50px" />
+    </div>
+    <select>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="net">NET</option>
+        <option value="csharp">C#</option>
+    </select>
+    <div class="projects-result">
+        <div class="projects-item">
+            <img src="images/projects/project1.jpg" width="400px" /><br />
+            <span class="projects-item-title">Langlang Buana</span><br />
+            <span class="projects-item-caption">A Platform for Travelers to Share Global Travel Insights</span><br />
+            <button>GITHUB</button>
+            <button>VIDEO</button>
+        </div>
+        <div class="projects-item">
+            <img src="images/projects/project1.jpg" width="400px" /><br />
+            <span class="projects-item-title">Langlang Buana</span><br />
+            <span class="projects-item-caption">A Platform for Travelers to Share Global Travel Insights</span><br />
+            <button>GITHUB</button>
+            <button>VIDEO</button>
+        </div>
+    </div>
+    <div class="gotolink">
+        <a href="#contactme">Get in Touch</a>
+        <img src="images/arrow-down.gif" width="32px" />
+    </div>
+</section>
+<section id="contactme" class="bg-brown">
+    <h1>Let’s connect if you’re interested in working together.</h1>
+    <img src="images/circle-light.png" width="100px" />
+    <hr />
+    <div class="contactme-item">
+        <img src="images/verify.png" width="50px" />
+        <span class="contactme-item-name">LINKEDIN</span><br />
+        <span class="contactme-item-info"><a href="https://www.linkedin.com/in/shiennyhadi/">Shienny Hadi</a></span>
+    </div>
+    <div class="contactme-item">
+        <img src="images/verify.png" width="50px" />
+        <span class="contactme-item-name">EMAIL</span><br />
+        <span class="contactme-item-info">
+            <a href="mailto:shiennymendeline97@gmail.com?body=Hello,%20Shienny%20Hadi">shiennymendeline97@gmail.com</a>
+        </span>
+    </div>
+    <div class="contactme-item">
+        <img src="images/verify.png" width="50px" />
+        <span class="contactme-item-name">PHONE</span><br />
+        <img src="images/id.png" width="32px" alt="Description" title="Indonesia" />
+        <span class="contactme-item-info"><a href="https://wa.me/+6281330251997">(+62) 813-3025-1997</a></span>
+    </div>
+    <a href="#profile" id="backToTop">
+        <img src="images/back-to-top.png" width="50px" />
+    </a>
+</section>
+<div>Copyright © 2025 Shienny Hadi. All Rights Reserved.</div>
+@code {
+    private string searchSkill = "";
+    private List<string> selectedSkillsForProject = new List<string>();
+}
