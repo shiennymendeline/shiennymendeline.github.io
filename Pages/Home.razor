@@ -1,16 +1,28 @@
 ﻿@page "/"
 
 <section id="profile">
-    <h1><i>Hello,</i> <span>I am Shienny!</span></h1>
-    <img src="images/circle-dark.png" width="100px" />
-    <div class="profile-info">
-        As a Full Stack Developer with expertise in C# and .NET, I’m a fast learner who focuses on creating clean, reusable code and building parameterized solutions that improve system flexibility and maintainability
+    
+    <div class="profile-container d-flex justify-content-center align-items-center">
+        <div class="profile-sub-container d-flex justify-content-center align-items-center">
+            <div class="profile-img flex-shrink-0">
+                <img src="images/profiles/profile1.jpg" />
+            </div>
+            <div class="profile-info flex-grow-1 ms-3">
+                <h1><i>Hello,</i> <span class="profile-highlight">I am Shienny!</span></h1>
+                <img class="profile-mark" src="images/circle-dark.png" />
+                <div class="profile-desc">
+                    As a <span>Full Stack Developer</span> with expertise in <span>C# and .NET</span>, I am a <span>fast learner</span> who focuses on creating <span>clean, reusable code</span> and building <span>parameterized solutions</span> that improve system flexibility and maintainability
+                </div>
+                <div class="profile-buttons d-flex justify-content-center align-items-center">
+                    <a href="docs/CV Shienny Hadi.docx" download=""><button>DOWNLOAD CV</button></a>
+                    <a href="#contactme"><button>CONTACT ME</button></a>
+                </div>
+            </div>
+        </div>
     </div>
-    <img src="images/profiles/profile1.jpg" width="300px" />
-    <button>DOWNLOAD CV</button>
-    <button>CONTACT ME</button>
+    
     <div class="gotolink">
-        <a href="#aboutme">Get to know me</a>
+        <a href="#aboutme">Get to know me</a><br/>
         <img src="images/arrow-down.gif" width="32px" />
     </div>
 </section>
@@ -135,8 +147,10 @@
         <img src="images/back-to-top.png" width="50px" />
     </a>
 </section>
-<div>Copyright © 2025 Shienny Hadi. All Rights Reserved.</div>
+<div class="bg-brown">Copyright © 2025 Shienny Hadi. All Rights Reserved.</div>
 @code {
     private string searchSkill = "";
     private List<string> selectedSkillsForProject = new List<string>();
+
+
 }
