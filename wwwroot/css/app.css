@@ -126,6 +126,7 @@ code {
 
 body {
     color: var(--black);
+    font-family: Carlito, Tahoma;
 }
 /* Regular weight */
 @font-face {
@@ -185,3 +186,7 @@ button {
     button:active {
         background-color: var(--darkbrown); /* Even darker green on click */
     }
+
+h1 {
+    font-family: Radley, Tahoma;
+}

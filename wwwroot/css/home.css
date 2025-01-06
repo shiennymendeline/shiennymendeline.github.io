@@ -1,13 +1,5 @@
-﻿.links a {
-    margin: 0 10px 0 10px;
-    color: #996249;
-}
-
-.container-info {
-    border: 1px solid var(--black);
-}
-
-.profile-container {
+﻿/* PROFILE */
+.container-maxvh {
     height: 90vh;
 }
 
@@ -29,11 +21,10 @@
 .profile-info {
     max-width: 840px;
 }
-.profile-info h1 {
-    font-family: Radley, Tahoma;
-    font-size: 5vw;
-    /*position: relative;*/
-}
+    .profile-info h1 {
+        font-size: 72pt;
+        /*position: relative;*/
+    }
 
 .profile-highlight {
     /*position: relative;*/
@@ -74,7 +65,6 @@
 }*/
 
 .profile-desc {
-    font-family: Carlito, Tahoma;
     font-size: 19pt;
     text-align: center;
     margin-top: 5vh;
@@ -105,3 +95,65 @@
         color: var(--brown);
         font-size: 18pt;
     }
+
+/* ABOUT ME */
+.aboutme-title {
+    font-style: italic;
+    color: var(--brown);
+    font-size: 72pt;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.aboutme-sub-container {
+    width: 80%;
+}
+
+.aboutme-img img {
+    width: 500px;
+    height: 550px;
+    object-fit: contain;
+    border-radius: 47% 47% 0 0;
+}
+
+.aboutme-desc {
+    font-size: 16pt;
+    text-align: center;
+}
+
+.aboutme-mark {
+    position: absolute;
+    top: 102%;
+    left: 9.4%;
+    transform: translateY(100%);
+    width: 30vh;
+}
+
+/* BOX INFO */
+.box-info {
+    border: 1px solid var(--black);
+    text-align:center;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16pt;
+}
+
+.box-first {
+    margin-left:0;
+}
+
+.box-last {
+    margin-right: 0;
+}
+
+.box-info-title {
+    font-weight: bold;
+}
+
+/* UNCATEGORIZED */
+.links a {
+    margin: 0 10px 0 10px;
+    color: #996249;
+}
+
