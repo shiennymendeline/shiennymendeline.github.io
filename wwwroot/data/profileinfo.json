@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "title": "NET",
+      "status": "Experienced"
+    },
+    {
+      "title": "HTML",
+      "status": "Experienced"
+    },
+    {
+      "title": "CSS",
+      "status": "Experienced"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Langlang Buana",
+      "status": "A Platform for Travelers to Share Global Travel Insights",
+      "displaypath": null,
+      "hyperlink": null,
+      "videolink": null,
+      "livelink": null
+    },
+    {
+      "title": "Langlang Buana",
+      "status": "A Platform for Travelers to Share Global Travel Insights",
+      "displaypath": null,
+      "hyperlink": null,
+      "videolink": null,
+      "livelink": null
+    }
+  ]
+}

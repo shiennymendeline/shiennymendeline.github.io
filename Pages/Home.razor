@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using shiennymendeline.github.io.Models
 
 <section id="profile">
     
@@ -61,48 +62,23 @@
             </div>
         </div>
     </div>
-
-    @* <h1>About Me</h1>
-    <img src="images/circle-dark.png" width="100px" />
-    <div class="container-info">
-        <img src="images/exp.png" width="32px" />
-        <br />
-        Experience
-        <br />
-        5+ Years
-        <br />
-        Fullstack Development
-    </div>
-    <div class="container-info">
-        <img src="images/edu.png" width="32px" />
-        <br />
-        Education
-        <br />
-        Bachelor of Informatics Engineering (S.Kom)
-        <br />
-        GPA 3.6/4.00 (Cum Laude)
-    </div>
-    <img src="images/profiles/profile2.jpg" width="300px" />
-    <div class="container-detail">
-        With over 5 years of experience in software development, including roles as a Software Engineer at PT Bank Mandiri Tbk and a .NET Developer at Freeport Indonesia, I specialize in creating scalable applications using the .NET Framework. I have successfully led projects, contributed to Go-Live applications, and optimized systems with parameterized solutions. Holding a Bachelor's Degree in Informatics Engineering, I am a fast learner, team player, and detail-oriented coder, passionate about developing user-friendly and secure applications that add value to businesses and customers.
-    </div> *@
     <div class="gotolink">
         <a href="#skills">Discover my skills</a><br />
         <img src="images/arrow-down.gif" width="32px" />
     </div>
 </section>
 <section id="skills">
-    <div class="skills-title">
-        <h1>Skills</h1>
-        <img src="images/doodle.png" width="200px" />
-    </div>
-    <div class="skills-chips">
-        <button>ALL</button>
-        <button>FRONT END</button>
-        <button>BACK END</button>
-        <button>DATABASE</button>
-        <button>VERSION CONTROL</button>
-        <button>SOFT SKILLS</button>
+    <h1 class="skills-title">Skills</h1>
+    <img class="skills-doodle" src="images/doodle.png" />
+    <br />
+    <div class="skills-chips d-flex justify-content-center">
+        @foreach (var cat in skillCategories)
+        {
+            <div class="chip-info @(cat.IsSelected? "chip-info-checked" : "")" id="chip@(cat.Id)">
+                <input id="@("cb_"+cat.Id)" aria-label="@cat.Id" class="chip-info-cb" type="checkbox" @bind="@cat.IsSelected" />
+                <label for="@("cb_"+cat.Id)">@cat.Name</label>
+            </div>
+        }
     </div>
     <InputText @bind-Value="searchSkill" />
     <button>SEARCH</button>
@@ -183,9 +159,3 @@
     </a>
 </section>
 <div class="bg-brown">Copyright © 2025 Shienny Hadi. All Rights Reserved.</div>
-@code {
-    private string searchSkill = "";
-    private List<string> selectedSkillsForProject = new List<string>();
-
-
-}

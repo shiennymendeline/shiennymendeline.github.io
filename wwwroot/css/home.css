@@ -33,10 +33,10 @@
 .profile-mark {
     position: absolute;
     bottom: 54.7%;
-    left: 73.4%;
+    left: 73.5%;
     transform: translateX(-50%);
     margin-bottom: 10px;
-    width: 38vh;
+    width: 21%;
 }
 
 
@@ -100,7 +100,6 @@
     font-style: italic;
     color: var(--brown);
     font-size: 72pt;
-    font-style: italic;
     margin-bottom: 10px;
 }
 
@@ -122,16 +121,33 @@
 
 .aboutme-mark {
     position: absolute;
-    top: 108.5%;
-    left: 9.2%;
+    top: 105%;
+    left: 9.8%;
     transform: translateY(100%);
-    width: 27vh;
+    width: 14.4%;
 }
 
-/* BOX INFO */
+/* SKILLS */
+.skills-title {
+    color: var(--brown);
+    font-size: 64pt;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.skills-doodle {
+    width: 18%;
+    position:absolute;
+    top: 206.4%;
+    left: 46%
+}
+
+
+
+/* COMPONENT : BOX INFO */
 .box-info {
     border: 1px solid var(--black);
-    text-align:center;
+    text-align: center;
     width: 50%;
     margin: 10px;
     padding: 10px;
@@ -148,6 +164,37 @@
 
 .box-info-title {
     font-weight: bold;
+}
+
+/* COMPONENT : CHIP INFO */
+.chip-info {
+    /*background-color: var(--brown);*/
+    border: 2px solid var(--black);
+    width: fit-content;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px 10px 0 0;
+    padding-right: 15px;
+    font-weight: bold;
+    font-size: 18pt;
+}
+    .chip-info:hover {
+        background-color: var(--taupe);
+        color: var(--white);
+    }
+
+    .chip-info:hover, .chip-info > label:hover {
+        cursor: pointer;
+    }
+
+    .chip-info-checked {
+        background-color: var(--brown);
+        color: var(--white);
+    }
+
+.chip-info-cb {
+    visibility: hidden;
 }
 
 /* UNCATEGORIZED */
