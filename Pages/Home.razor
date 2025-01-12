@@ -134,26 +134,20 @@
             <img class="projects-doodle" src="images/lines.png" />
         </div>
         <br />
-        <select>
+        @* todo *@
+        @* <select>
             <option value="html">HTML</option>
             <option value="css">CSS</option>
             <option value="net">NET</option>
             <option value="csharp">C#</option>
-        </select>
+        </select> *@
+        @* <MultiSelect Options="_items" @bind-SelectedOptions="_selectedItems"/> *@
         <div class="projects-result">
-            <div class="projects-item">
-                <img src="images/projects/project1.jpg" width="400px" /><br />
-                <span class="projects-item-title">Langlang Buana</span><br />
-                <span class="projects-item-caption">A Platform for Travelers to Share Global Travel Insights</span><br />
-                <button>GITHUB</button>
-                <button>VIDEO</button>
-            </div>
-            <div class="projects-item">
-                <img src="images/projects/project1.jpg" width="400px" /><br />
-                <span class="projects-item-title">Langlang Buana</span><br />
-                <span class="projects-item-caption">A Platform for Travelers to Share Global Travel Insights</span><br />
-                <button>GITHUB</button>
-                <button>VIDEO</button>
+            <div class="d-flex flex-wrap justify-content-center w-100">
+                @foreach (var p in projects)
+                {
+                    <CardInfo payload="@p" />
+                }
             </div>
         </div>
     </div>
@@ -163,29 +157,55 @@
     </div>
 </section>
 <section id="contactme" class="bg-brown">
-    <h1>Let’s connect if you’re interested in working together.</h1>
-    <img src="images/circle-light.png" width="100px" />
-    <hr />
-    <div class="contactme-item">
-        <img src="images/verify.png" width="50px" />
-        <span class="contactme-item-name">LINKEDIN</span><br />
-        <span class="contactme-item-info"><a href="https://www.linkedin.com/in/shiennyhadi/">Shienny Hadi</a></span>
+    <div class="contactme-container d-flex justify-content-center">
+        <div class="contactme-subcontainer">
+            <div class="contactme-header">
+                <h1 class="contactme-title">Let’s connect if you’re interested in working together.</h1>
+                <img src="images/circle-light.png" />
+            </div>
+            <hr />
+            <div class="d-flex contactme-group">
+                <div class="contactme-item">
+                    <div class="contactme-frame">
+                        <img src="images/linkedin.png" />
+                    </div>
+                    <div>
+                        <span class="contactme-item-name">LINKEDIN</span><br />
+                        <span class="contactme-item-info"><a href="https://www.linkedin.com/in/shiennyhadi/">Shienny Hadi</a></span>
+                    </div>
+                </div>
+                <div class="contactme-item">
+                    <div class="contactme-frame">
+                        <img src="images/email.png" />
+                    </div>
+                    <div>
+                        <span class="contactme-item-name">EMAIL</span><br />
+                        <span class="contactme-item-info">
+                            <a href="mailto:shiennymendeline97@gmail.com?body=Hello,%20Shienny%20Hadi">shiennymendeline97@gmail.com</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="contactme-item">
+                    <div class="contactme-frame">
+                        <img src="images/phone.png" />
+                    </div>
+                    <div>
+                        <span class="contactme-item-name">PHONE</span><br />
+                        <div class="d-flex">
+                            <div id="callCountryFrame">
+                                <img src="images/id-flag.png" id="callCountry" alt="Description" title="Indonesia" />
+                            </div>
+                            <span class="contactme-item-info"><a href="https://wa.me/+6281330251997">(+62) 813-3025-1997</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="contactme-item">
-        <img src="images/verify.png" width="50px" />
-        <span class="contactme-item-name">EMAIL</span><br />
-        <span class="contactme-item-info">
-            <a href="mailto:shiennymendeline97@gmail.com?body=Hello,%20Shienny%20Hadi">shiennymendeline97@gmail.com</a>
-        </span>
+    <div class="bg-brown">
+        <a href="#profile" id="backToTop">
+            <img src="images/back-to-top.png" width="50px" />
+        </a>
     </div>
-    <div class="contactme-item">
-        <img src="images/verify.png" width="50px" />
-        <span class="contactme-item-name">PHONE</span><br />
-        <img src="images/id.png" width="32px" alt="Description" title="Indonesia" />
-        <span class="contactme-item-info"><a href="https://wa.me/+6281330251997">(+62) 813-3025-1997</a></span>
-    </div>
-    <a href="#profile" id="backToTop">
-        <img src="images/back-to-top.png" width="50px" />
-    </a>
 </section>
-<div class="bg-brown">Copyright © 2025 Shienny Hadi. All Rights Reserved.</div>
+<div class="footer bg-brown">Copyright © 2025 Shienny Hadi. All Rights Reserved.</div>

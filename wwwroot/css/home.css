@@ -175,6 +175,85 @@
     text-align: center;
     font-size: 18pt;
 }
+
+.projects-result {
+    max-height: 74%;
+    overflow-y: scroll;
+}
+
+/* CONTACTME */
+.contactme-title {
+    font-size: 54pt;
+    text-align:center;
+    color: var(--oat);
+}
+.contactme-container {
+    height: 100vh;
+    align-items: center;
+}
+.contactme-subcontainer {
+    width: 56%;
+}
+.contactme-header {
+    margin-bottom: 30px;
+}
+.contactme-header img {
+    position: absolute;
+    width: 15%;
+    top: 455%;
+    left: 51.5%;
+}
+
+.contactme-container hr {
+    border: 1px solid var(--tan);
+}
+.contactme-group {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.contactme-frame {
+    background-color: var(--oat);
+    display: flex;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.contactme-item {
+    color: var(--oat);
+    display: flex;
+    font-family: Carlito, Tahoma;
+    font-size: 14pt;
+    width: 48%;
+    margin: 1%;
+}
+
+    .contactme-item img {
+        height: 30px;
+        object-fit: contain;
+    }
+    .contactme-item a {
+        text-decoration: none;
+        color: var(--oat);
+        font-style: italic;
+    }
+
+#callCountryFrame {
+    width: 32px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+#callCountry {
+    height:  16px;
+    object-fit: contain;
+}
 /* COMPONENT : BOX INFO */
 .box-info {
     border: 1px solid var(--black);
@@ -197,6 +276,26 @@
     font-weight: bold;
 }
 
+
+/* COMPONENT : CardInfo */
+.cardinfo-item {
+    font-family: Radley, Tahoma;
+    text-align: center;
+    margin: 5px;
+}
+.cardinfo-item-title {
+    font-style : italic;
+    font-size: 16pt;
+}
+.cardinfo-item img {
+    width: 400px;
+}
+    .cardinfo-item img:hover {
+        cursor: zoom-in;
+    }
+.cardinfo-buttons a {
+    margin: 5px;
+}
 
 /* COMPONENT : BoxInfoSimple */
 .boxinfosimple-item {
@@ -259,3 +358,14 @@
     color: #996249;
 }
 
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.footer {
+    text-align: center;
+    color: var(--oat);
+    font-family: Carlito, Tahoma;
+}

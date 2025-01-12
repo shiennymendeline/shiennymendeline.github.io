@@ -20,7 +20,20 @@ namespace shiennymendeline.github.io.Pages
             new("vc", "VERSION CONTROL"),
             new("ss", "SOFT SKILLS")
         };
-        public string VerifiedImgPath { get; set; } = "images/verify.png";
+        public List<CardInfoItem> projects = new List<CardInfoItem>()
+        {
+            new CardInfoItem()
+            {
+                ImgPath = "images/projects/project_pabrikgula.jpg",
+                Title = "Langlang Buana",
+                Caption = "A Platform for Travelers to Share Global Travel Insights",
+                ButtonPrimaryName = "GITHUB",
+                ButtonPrimaryLink = "#",
+                ButtonSecondaryName = "VIDEO",
+                ButtonSecondaryLink = "#"
+            }
+        };
+
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             if (firstRender)
