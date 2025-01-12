@@ -20,6 +20,7 @@ namespace shiennymendeline.github.io.Pages
             new("vc", "VERSION CONTROL"),
             new("ss", "SOFT SKILLS")
         };
+        public string VerifiedImgPath { get; set; } = "images/verify.png";
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             if (firstRender)

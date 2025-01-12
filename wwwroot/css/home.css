@@ -133,17 +133,48 @@
     font-size: 64pt;
     margin-bottom: 10px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .skills-doodle {
     width: 18%;
     position:absolute;
-    top: 206.4%;
+    top: 212%;
     left: 46%
 }
 
+.skills-search {
+    width: fit-content;
+    float: right;
+    margin: 10px 20px 0 0;
+}
 
+.skills-results {
+    margin-top: 4%;
+    max-height: 66%;
+    overflow-y: scroll;
+}
 
+/* PROJECTS */
+.projects-title {
+    color: var(--brown);
+    font-size: 64pt;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.projects-doodle {
+    width: 5%;
+    position: absolute;
+    top: 327.5%;
+    left: 50%;
+}
+
+.projects-header p {
+    text-align: center;
+    font-size: 18pt;
+}
 /* COMPONENT : BOX INFO */
 .box-info {
     border: 1px solid var(--black);
@@ -164,6 +195,31 @@
 
 .box-info-title {
     font-weight: bold;
+}
+
+
+/* COMPONENT : BoxInfoSimple */
+.boxinfosimple-item {
+    margin: 10px;
+    padding: 10px;
+    width: 16%;
+    border: 2px solid #1e1815;
+    background-color: white;
+    border-radius: 6px;
+}
+
+    .boxinfosimple-item img {
+        width: 50px;
+        object-fit: contain;
+    }
+
+.boxinfosimple-item-name {
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.skills-item-status {
+    font-size: 14pt;
 }
 
 /* COMPONENT : CHIP INFO */

@@ -1,8 +1,10 @@
 ﻿@page "/"
 @using shiennymendeline.github.io.Models
+@using shiennymendeline.github.io.Components
+@using shiennymendeline.github.io.Utils
 
 <section id="profile">
-    
+
     <div class="container-maxvh profile-container d-flex justify-content-center align-items-center">
         <div class="profile-sub-container d-flex justify-content-center align-items-center">
             <div class="profile-img flex-shrink-0">
@@ -21,9 +23,9 @@
             </div>
         </div>
     </div>
-    
+
     <div class="gotolink">
-        <a href="#aboutme">Get to know me</a><br/>
+        <a href="#aboutme">Get to know me</a><br />
         <img src="images/arrow-down.gif" width="32px" />
     </div>
 </section>
@@ -68,63 +70,91 @@
     </div>
 </section>
 <section id="skills">
-    <h1 class="skills-title">Skills</h1>
-    <img class="skills-doodle" src="images/doodle.png" />
-    <br />
-    <div class="skills-chips d-flex justify-content-center">
-        @foreach (var cat in skillCategories)
-        {
-            <div class="chip-info @(cat.IsSelected? "chip-info-checked" : "")" id="chip@(cat.Id)">
-                <input id="@("cb_"+cat.Id)" aria-label="@cat.Id" class="chip-info-cb" type="checkbox" @bind="@cat.IsSelected" />
-                <label for="@("cb_"+cat.Id)">@cat.Name</label>
+    <div class="container-maxvh">
+        <h1 class="skills-title">Skills</h1>
+        <img class="skills-doodle" src="images/doodle.png" />
+        <br />
+        <div class="skills-chips d-flex justify-content-center">
+            @foreach (var cat in skillCategories)
+            {
+                <div class="chip-info @(cat.IsSelected? "chip-info-checked" : "")" id="chip@(cat.Id)">
+                    <input id="@("cb_"+cat.Id)" aria-label="@cat.Id" class="chip-info-cb" type="checkbox" @bind="@cat.IsSelected" />
+                    <label for="@("cb_"+cat.Id)">@cat.Name</label>
+                </div>
+            }
+        </div>
+        <div style="width:100%">
+            <div class="skills-search">
+                <div class="input-group mb-3">
+                    <input type="text" @bind="searchSkill" class="form-control" placeholder="Search Skill" aria-label="Search Skill" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">SEARCH</button>
+                </div>
             </div>
-        }
-    </div>
-    <InputText @bind-Value="searchSkill" />
-    <button>SEARCH</button>
-    <div class="skills-results">
-        <div class="skills-item">
-            <img src="images/verify.png" width="50px" />
-            <span class="skills-item-name">NET</span><br />
-            <span class="skills-item-status">Experienced</span>
         </div>
-        <div class="skills-item">
-            <img src="images/verify.png" width="50px" />
-            <span class="skills-item-name">C#</span><br />
-            <span class="skills-item-status">Experienced</span>
+        <div class="skills-results">
+            <div class="d-flex flex-wrap justify-content-center w-100">
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="JavaScript" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="Fast Learner" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+            </div>
         </div>
-    </div>
+    </div>    
     <div class="gotolink">
         <a href="#projects">Check out my projects</a><br />
         <img src="images/arrow-down.gif" width="32px" />
     </div>
 </section>
 <section id="projects">
-    <div class="projects-title">
-        <h1>Projects</h1>
-        <p>Here are some of the projects I worked on</p>
-        <img src="images/lines.png" width="50px" />
-    </div>
-    <select>
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="net">NET</option>
-        <option value="csharp">C#</option>
-    </select>
-    <div class="projects-result">
-        <div class="projects-item">
-            <img src="images/projects/project1.jpg" width="400px" /><br />
-            <span class="projects-item-title">Langlang Buana</span><br />
-            <span class="projects-item-caption">A Platform for Travelers to Share Global Travel Insights</span><br />
-            <button>GITHUB</button>
-            <button>VIDEO</button>
+    <div class="container-maxvh">
+        <div class="projects-header">
+            <h1 class="projects-title">Projects</h1>
+            <p>Here are some of the projects I worked on</p>
+            <img class="projects-doodle" src="images/lines.png" />
         </div>
-        <div class="projects-item">
-            <img src="images/projects/project1.jpg" width="400px" /><br />
-            <span class="projects-item-title">Langlang Buana</span><br />
-            <span class="projects-item-caption">A Platform for Travelers to Share Global Travel Insights</span><br />
-            <button>GITHUB</button>
-            <button>VIDEO</button>
+        <br />
+        <select>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="net">NET</option>
+            <option value="csharp">C#</option>
+        </select>
+        <div class="projects-result">
+            <div class="projects-item">
+                <img src="images/projects/project1.jpg" width="400px" /><br />
+                <span class="projects-item-title">Langlang Buana</span><br />
+                <span class="projects-item-caption">A Platform for Travelers to Share Global Travel Insights</span><br />
+                <button>GITHUB</button>
+                <button>VIDEO</button>
+            </div>
+            <div class="projects-item">
+                <img src="images/projects/project1.jpg" width="400px" /><br />
+                <span class="projects-item-title">Langlang Buana</span><br />
+                <span class="projects-item-caption">A Platform for Travelers to Share Global Travel Insights</span><br />
+                <button>GITHUB</button>
+                <button>VIDEO</button>
+            </div>
         </div>
     </div>
     <div class="gotolink">
