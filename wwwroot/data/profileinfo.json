@@ -3,58 +3,62 @@
     "greeting1": "Hello",
     "greeting2": "I am Shienny",
     "summary": "As a [Full Stack Developer] with expertise in [C# and .NET], I am a [fast learner] who focuses on creating [clean, reusable code] and building [parameterized solutions] that improve system flexibility and maintainability",
-    "button1": {
-      "text": "DOWNLOAD CV",
-      "link": "docs/CV Shienny Hadi.docx"
-    },
-    "button2": {
-      "text": "CONTACT ME",
-      "link": "#contactme"
-    },
+    "links": [
+      {
+        "linkName": "DOWNLOAD CV",
+        "link": "docs/CV Shienny Hadi.docx"
+      },
+      {
+        "linkName": "CONTACT ME",
+        "link": "#contactme"
+      }
+    ],
     "profileImg": "profile1.jpg",
     "gotoLink": "Get to know me"
   },
   "aboutme": {
     "title": "About Me",
     "aboutmeImg": "profile2.jpg",
-    "highlight1": {
-      "title": "Experience",
-      "caption": "5+ years\nFull Stack Developer",
-      "iconImg": "exp.png"
-    },
-    "highlight2": {
-      "title": "Education",
-      "caption": "Bachelor of Informatics Engineering (S.Kom)\nGPA 3.6/4.00\n(Cum Laude)",
-      "iconImg": "edu.png"
-    },
+    "highlights": [
+      {
+        "title": "Experience",
+        "caption": "5+ years\nFull Stack Developer",
+        "iconImg": "exp.png"
+      },
+      {
+        "title": "Education",
+        "caption": "Bachelor of Informatics Engineering (S.Kom)\nGPA 3.6/4.00\n(Cum Laude)",
+        "iconImg": "edu.png"
+      }
+    ],
     "description": "With over 5 years of experience in software development, including roles as a Software Engineer at PT Bank Mandiri Tbk and a .NET Developer at Freeport Indonesia, I specialize in creating scalable applications using the .NET Framework. I have successfully led projects, contributed to Go-Live applications, and optimized systems with parameterized solutions. Holding a Bachelor's Degree in Informatics Engineering, I am a fast learner, team player, and detail-oriented coder, passionate about developing user-friendly and secure applications that add value to businesses and customers.",
     "gotoLink": "Discover my skills"
   },
   "skills": {
     "title": "Skills",
     "placeholderSearch": "Search Skill",
-    "buttonSearch": "SEARCH",
-    "all": "ALL",
+    "textSearch": "SEARCH",
+    "allInfo": "ALL",
     "categories": [
       {
-        "key": "fe",
-        "title": "Front End"
+        "id": "fe",
+        "name": "Front End"
       },
       {
-        "key": "be",
-        "title": "Back End"
+        "id": "be",
+        "name": "Back End"
       },
       {
-        "key": "db",
-        "title": "Database"
+        "id": "db",
+        "name": "Database"
       },
       {
-        "key": "tools",
-        "title": "Tools"
+        "id": "tools",
+        "name": "Tools"
       },
       {
-        "key": "ss",
-        "title": "Soft Skill"
+        "id": "ss",
+        "name": "Soft Skill"
       }
     ],
     "items": [
@@ -154,11 +158,11 @@
         "caption": "A Platform for Travelers to Share Global Travel Insights",
         "imgPath": "",
         "button1": {
-          "text": "GITHUB",
+          "name": "GITHUB",
           "link": ""
         },
         "button2": {
-          "text": "VIDEO",
+          "name": "VIDEO",
           "link": ""
         }
       }
