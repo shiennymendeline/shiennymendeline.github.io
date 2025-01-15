@@ -32,6 +32,13 @@
         public string AllInfo { get; set; }
         public List<ItemOption> Categories { get; set; }
         public List<SkillItem> Skills { get; set; }
+        public string GotoLink { get; set; }
+    }
+
+    public class Project
+    {
+        public string Title { get; set; }
+        public string Caption { get; set; }
     }
 
     public class SkillItem
