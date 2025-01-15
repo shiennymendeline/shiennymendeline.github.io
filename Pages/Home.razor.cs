@@ -2,13 +2,16 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using shiennymendeline.github.io.Models;
 using shiennymendeline.github.io.Services;
+using System.Net.Http.Json;
+using static shiennymendeline.github.io.Pages.Weather;
+using static System.Net.WebRequestMethods;
 
 namespace shiennymendeline.github.io.Pages
 {
     public partial class Home : ComponentBase
     {
         [Inject] IJSService JSService { get; set; } = default!;
-
+        [Inject] HttpClient Http { get; set; } = default!;
         public string searchSkill { get; set; } = "";
         public List<string> selectedSkillsForProject { get; set; } = new List<string>();
         public List<ItemOption> skillCategories { get; set; } = new()
@@ -33,6 +36,11 @@ namespace shiennymendeline.github.io.Pages
                 ButtonSecondaryLink = "#"
             }
         };
+
+        protected async override Task OnInitializedAsync()
+        {
+            await Http.GetFromJsonAsync<WeatherForecast[]>("data/profileinfo.json");
+        }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {

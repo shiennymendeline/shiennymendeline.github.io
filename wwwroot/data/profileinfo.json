@@ -1,34 +1,192 @@
 {
-  "skills": [
-    {
-      "title": "NET",
-      "status": "Experienced"
+  "profile": {
+    "greeting1": "Hello",
+    "greeting2": "I am Shienny",
+    "summary": "As a [Full Stack Developer] with expertise in [C# and .NET], I am a [fast learner] who focuses on creating [clean, reusable code] and building [parameterized solutions] that improve system flexibility and maintainability",
+    "button1": {
+      "text": "DOWNLOAD CV",
+      "link": "docs/CV Shienny Hadi.docx"
     },
-    {
-      "title": "HTML",
-      "status": "Experienced"
+    "button2": {
+      "text": "CONTACT ME",
+      "link": "#contactme"
     },
-    {
-      "title": "CSS",
-      "status": "Experienced"
-    }
-  ],
-  "projects": [
-    {
-      "title": "Langlang Buana",
-      "status": "A Platform for Travelers to Share Global Travel Insights",
-      "displaypath": null,
-      "hyperlink": null,
-      "videolink": null,
-      "livelink": null
+    "profileImg": "profile1.jpg",
+    "gotoLink": "Get to know me"
+  },
+  "aboutme": {
+    "title": "About Me",
+    "aboutmeImg": "profile2.jpg",
+    "highlight1": {
+      "title": "Experience",
+      "caption": "5+ years\nFull Stack Developer",
+      "iconImg": "exp.png"
     },
-    {
-      "title": "Langlang Buana",
-      "status": "A Platform for Travelers to Share Global Travel Insights",
-      "displaypath": null,
-      "hyperlink": null,
-      "videolink": null,
-      "livelink": null
-    }
-  ]
+    "highlight2": {
+      "title": "Education",
+      "caption": "Bachelor of Informatics Engineering (S.Kom)\nGPA 3.6/4.00\n(Cum Laude)",
+      "iconImg": "edu.png"
+    },
+    "description": "With over 5 years of experience in software development, including roles as a Software Engineer at PT Bank Mandiri Tbk and a .NET Developer at Freeport Indonesia, I specialize in creating scalable applications using the .NET Framework. I have successfully led projects, contributed to Go-Live applications, and optimized systems with parameterized solutions. Holding a Bachelor's Degree in Informatics Engineering, I am a fast learner, team player, and detail-oriented coder, passionate about developing user-friendly and secure applications that add value to businesses and customers.",
+    "gotoLink": "Discover my skills"
+  },
+  "skills": {
+    "title": "Skills",
+    "placeholderSearch": "Search Skill",
+    "buttonSearch": "SEARCH",
+    "all": "ALL",
+    "categories": [
+      {
+        "key": "fe",
+        "title": "Front End"
+      },
+      {
+        "key": "be",
+        "title": "Back End"
+      },
+      {
+        "key": "db",
+        "title": "Database"
+      },
+      {
+        "key": "tools",
+        "title": "Tools"
+      },
+      {
+        "key": "ss",
+        "title": "Soft Skill"
+      }
+    ],
+    "items": [
+      {
+        "category": "fe",
+        "name": "HTML",
+        "level": "Experienced",
+        "iconImg": "html.png"
+      },
+      {
+        "category": "fe",
+        "name": "CSS",
+        "level": "Experienced",
+        "iconImg": "css.png"
+      },
+      {
+        "category": "fe",
+        "name": "JavaScript",
+        "level": "Experienced",
+        "iconImg": "js.png"
+      },
+      {
+        "category": "fe",
+        "name": "React",
+        "level": "Experienced",
+        "iconImg": "react.png"
+      },
+      {
+        "category": "be",
+        "name": "C#",
+        "level": "Experienced",
+        "iconImg": "csharp.png"
+      },
+      {
+        "category": "be",
+        "name": ".NET",
+        "level": "Experienced",
+        "iconImg": "dotnet.png"
+      },
+      {
+        "category": "be",
+        "name": "Node.js",
+        "level": "Experienced",
+        "iconImg": "nodejs.png"
+      },
+      {
+        "category": "db",
+        "name": "SQL Server",
+        "level": "Experienced",
+        "iconImg": "sqlserver.png"
+      },
+      {
+        "category": "db",
+        "name": "MongoDB",
+        "level": "Experienced",
+        "iconImg": "mongodb.png"
+      },
+      {
+        "category": "tools",
+        "name": "Git",
+        "level": "Experienced",
+        "iconImg": "git.png"
+      },
+      {
+        "category": "tools",
+        "name": "Docker",
+        "level": "Experienced",
+        "iconImg": "docker.png"
+      },
+      {
+        "category": "ss",
+        "name": "Problem Solving",
+        "level": "Experienced",
+        "iconImg": "problem-solving.png"
+      },
+      {
+        "category": "ss",
+        "name": "Teamwork",
+        "level": "Experienced",
+        "iconImg": "teamwork.png"
+      },
+      {
+        "category": "ss",
+        "name": "Communication",
+        "level": "Experienced",
+        "iconImg": "communication.png"
+      }
+    ],
+    "gotoLink": "Check out my projects"
+  },
+  "projects": {
+    "title": "Projects",
+    "caption": "Here are some of the projects I worked on",
+    "items": [
+      {
+        "title": "Langlang Buana",
+        "caption": "A Platform for Travelers to Share Global Travel Insights",
+        "imgPath": "",
+        "button1": {
+          "text": "GITHUB",
+          "link": ""
+        },
+        "button2": {
+          "text": "VIDEO",
+          "link": ""
+        }
+      }
+    ],
+    "gotoLink":  "Get in Touch"
+  },
+  "contactme": {
+    "caption": "Let’s connect if you’re interested in working together.",
+    "contacts": [
+      {
+        "name": "LINKEDIN",
+        "linkname": "Shienny Hadi",
+        "link": "https://www.linkedin.com/in/shiennyhadi/",
+        "iconImg": "linkedin.png"
+      },
+      {
+        "name": "EMAIL",
+        "linkname": "shiennymendeline97@gmail.com",
+        "link": "mailto:shiennymendeline97@gmail.com?body=Hello,%20Shienny%20Hadi",
+        "iconImg": "email.png"
+      },
+      {
+        "name": "WhatsApp",
+        "linkname": "(+62) 813-3025-1997",
+        "link": "https://wa.me/+6281330251997",
+        "iconImg": "phone.png"
+      }
+    ]
+  },
+  "footer": "Copyright © 2025 Shienny Hadi. All Rights Reserved."
 }
