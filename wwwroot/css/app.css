@@ -170,26 +170,35 @@ body {
     background-color: var(--brown);
 }
 
-button {
+.btn {
     padding: 10px;
+    align-items: center;
     background-color: var(--oat);
-    color: var(--black);
     font-weight: bold;
     transition: background-color 0.25s;
+    border: 2px solid black;
+    text-decoration: none !important;
+    color: var(--black) !important;
+    margin: 10px;
 }
 
-    button:hover {
+    .btn:hover {
         background-color: var(--brown);
         color: var(--oat);
-        /*;
-        
-        border-color: var(--brown);*/
     }
 
-    button:active {
+    .btn:active {
         background-color: var(--darkbrown); /* Even darker green on click */
     }
 
 h1 {
     font-family: Radley, Tahoma;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
 }

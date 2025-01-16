@@ -11,24 +11,28 @@
         <div class="container-maxvh profile-container d-flex justify-content-center align-items-center">
             <div class="profile-sub-container d-flex justify-content-center align-items-center">
                 <div class="profile-img flex-shrink-0">
-                    <img src="images/profiles/profile1.jpg" />
+                    <img src="images/profiles/@MyProfile.Profile.ProfileImg" />
                 </div>
                 <div class="profile-info flex-grow-1 ms-3">
-                    <h1><i>Hello,</i> <span class="profile-highlight">I am Shienny!</span></h1>
+                    <h1><i>@MyProfile.Profile.Greeting1,</i> <span class="profile-highlight">@MyProfile.Profile.Greeting2!</span></h1>
                     <img class="profile-mark" src="images/circle-dark.png" />
                     <div class="profile-desc">
-                        As a <span>Full Stack Developer</span> with expertise in <span>C# and .NET</span>, I am a <span>fast learner</span> who focuses on creating <span>clean, reusable code</span> and building <span>parameterized solutions</span> that improve system flexibility and maintainability
+                        @* As a <span>Full Stack Developer</span> with expertise in <span>C# and .NET</span>, I am a <span>fast learner</span> who focuses on creating <span>clean, reusable code</span> and building <span>parameterized solutions</span> that improve system flexibility and maintainability *@
+                        @((MarkupString)MyProfile.Profile.Summary)
                     </div>
                     <div class="profile-buttons d-flex justify-content-center align-items-center">
-                        <a href="docs/CV Shienny Hadi.docx" download=""><button>DOWNLOAD CV</button></a>
-                        <a href="#contactme"><button>CONTACT ME</button></a>
+                        
+                        @foreach (var link in MyProfile.Profile.Links)
+                        {
+                            <MudLink Class="btn" Href="@link.Link">@link.LinkName</MudLink>
+                        }
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="gotolink">
-            <a href="#aboutme">Get to know me</a><br />
+            <a href="#aboutme">@MyProfile.Profile.GotoLink</a><br />
             <img src="images/arrow-down.gif" width="32px" />
         </div>
     </section>
@@ -36,39 +40,26 @@
         <div class="container-maxvh aboutme-container d-flex justify-content-center align-items-center">
             <div class="aboutme-sub-container d-flex justify-content-center align-items-center">
                 <div class="aboutme-info flex-grow-1 ms-3">
-                    <h1 class="aboutme-title">About Me</h1>
+                    <h1 class="aboutme-title">@MyProfile.Aboutme.Title</h1>
                     <img class="aboutme-mark" src="images/circle-dark.png" />
                     <div class="d-flex justify-content-center">
-                        <div class="box-info box-first">
-                            <img src="images/exp.png" width="32px" />
-                            <br />
-                            <span class="box-info-title">Experience</span>
-                            <br />
-                            5+ Years
-                            <br />
-                            Fullstack Development
-                        </div>
-                        <div class="box-info box-last">
-                            <img src="images/edu.png" width="32px" />
-                            <br />
-                            <span class="box-info-title">Education</span>
-                            <br />
-                            Bachelor of Informatics Engineering (S.Kom)
-                            <br />
-                            GPA 3.6/4.00 (Cum Laude)
-                        </div>
+
+                        @foreach (var h in MyProfile.Aboutme.highlights)
+                        {
+                            <BoxHighlight Title="@h.Title" Caption="@h.Caption" IconImg="@h.IconImg" Class="@h.CssClass" />
+                        }
                     </div>
                     <div class="aboutme-desc">
-                        With over 5 years of experience in software development, including roles as a Software Engineer at PT Bank Mandiri Tbk and a .NET Developer at Freeport Indonesia, I specialize in creating scalable applications using the .NET Framework. I have successfully led projects, contributed to Go-Live applications, and optimized systems with parameterized solutions. Holding a Bachelor's Degree in Informatics Engineering, I am a fast learner, team player, and detail-oriented coder, passionate about developing user-friendly and secure applications that add value to businesses and customers.
+                        @MyProfile.Aboutme.Description                        
                     </div>
                 </div>
                 <div class="aboutme-img flex-shrink-0">
-                    <img src="images/profiles/profile2.jpg" />
+                    <img src="images/profiles/@MyProfile.Aboutme.AboutmeImg" />
                 </div>
             </div>
         </div>
         <div class="gotolink">
-            <a href="#skills">Discover my skills</a><br />
+            <a href="#skills">@MyProfile.Aboutme.GotoLink</a><br />
             <img src="images/arrow-down.gif" width="32px" />
         </div>
     </section>

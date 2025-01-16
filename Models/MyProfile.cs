@@ -90,5 +90,6 @@
         public string Title { get; set; }
         public string Caption { get; set; }
         public string IconImg { get; set; }
+        public string CssClass { get; set; }
     }
 }

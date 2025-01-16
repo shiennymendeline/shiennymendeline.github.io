@@ -16,7 +16,7 @@ namespace shiennymendeline.github.io.Pages
         [Inject] IJSService JSService { get; set; } = default!;
         [Inject] HttpClient Http { get; set; } = default!;
         [Inject] ISnackbar Snackbar { get; set; } = default!;
-        public MyProfile? MyProfile { get; set; } = null;
+        public MyProfile MyProfile { get; set; } = default!;
         
         public string searchSkill { get; set; } = "";
         public List<string> selectedSkillsForProject { get; set; } = new List<string>();
@@ -55,13 +55,25 @@ namespace shiennymendeline.github.io.Pages
                 }
                 else
                 {
-                    MyProfile.Skill.Categories.Insert(0, new ItemOption("all", MyProfile.Skill.AllInfo, true));
+                    SetupSkillCategories();
+                    SetupProfileInfo();
                 }
             }
             catch
             {
                 Snackbar.Add("Failed to load profile data", Severity.Error);
             }
+        }
+
+        private void SetupProfileInfo()
+        {
+            var tmpStr = MyProfile.Profile.Summary.Replace("[", "<span>").Replace("]","</span>");
+            MyProfile.Profile.Summary = tmpStr;
+        }
+
+        private void SetupSkillCategories()
+        {
+            MyProfile.Skill.Categories.Insert(0, new ItemOption("all", MyProfile.Skill.AllInfo, true));
         }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
