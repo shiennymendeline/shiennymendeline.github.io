@@ -3,209 +3,213 @@
 @using shiennymendeline.github.io.Components
 @using shiennymendeline.github.io.Utils
 
-<section id="profile">
 
-    <div class="container-maxvh profile-container d-flex justify-content-center align-items-center">
-        <div class="profile-sub-container d-flex justify-content-center align-items-center">
-            <div class="profile-img flex-shrink-0">
-                <img src="images/profiles/profile1.jpg" />
-            </div>
-            <div class="profile-info flex-grow-1 ms-3">
-                <h1><i>Hello,</i> <span class="profile-highlight">I am Shienny!</span></h1>
-                <img class="profile-mark" src="images/circle-dark.png" />
-                <div class="profile-desc">
-                    As a <span>Full Stack Developer</span> with expertise in <span>C# and .NET</span>, I am a <span>fast learner</span> who focuses on creating <span>clean, reusable code</span> and building <span>parameterized solutions</span> that improve system flexibility and maintainability
-                </div>
-                <div class="profile-buttons d-flex justify-content-center align-items-center">
-                    <a href="docs/CV Shienny Hadi.docx" download=""><button>DOWNLOAD CV</button></a>
-                    <a href="#contactme"><button>CONTACT ME</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
+@if (MyProfile != null)
+{
+    <section id="profile">
 
-    <div class="gotolink">
-        <a href="#aboutme">Get to know me</a><br />
-        <img src="images/arrow-down.gif" width="32px" />
-    </div>
-</section>
-<section id="aboutme">
-    <div class="container-maxvh aboutme-container d-flex justify-content-center align-items-center">
-        <div class="aboutme-sub-container d-flex justify-content-center align-items-center">
-            <div class="aboutme-info flex-grow-1 ms-3">
-                <h1 class="aboutme-title">About Me</h1>
-                <img class="aboutme-mark" src="images/circle-dark.png" />
-                <div class="d-flex justify-content-center">
-                    <div class="box-info box-first">
-                        <img src="images/exp.png" width="32px" />
-                        <br />
-                        <span class="box-info-title">Experience</span>
-                        <br />
-                        5+ Years
-                        <br />
-                        Fullstack Development
+        <div class="container-maxvh profile-container d-flex justify-content-center align-items-center">
+            <div class="profile-sub-container d-flex justify-content-center align-items-center">
+                <div class="profile-img flex-shrink-0">
+                    <img src="images/profiles/profile1.jpg" />
+                </div>
+                <div class="profile-info flex-grow-1 ms-3">
+                    <h1><i>Hello,</i> <span class="profile-highlight">I am Shienny!</span></h1>
+                    <img class="profile-mark" src="images/circle-dark.png" />
+                    <div class="profile-desc">
+                        As a <span>Full Stack Developer</span> with expertise in <span>C# and .NET</span>, I am a <span>fast learner</span> who focuses on creating <span>clean, reusable code</span> and building <span>parameterized solutions</span> that improve system flexibility and maintainability
                     </div>
-                    <div class="box-info box-last">
-                        <img src="images/edu.png" width="32px" />
-                        <br />
-                        <span class="box-info-title">Education</span>
-                        <br />
-                        Bachelor of Informatics Engineering (S.Kom)
-                        <br />
-                        GPA 3.6/4.00 (Cum Laude)
+                    <div class="profile-buttons d-flex justify-content-center align-items-center">
+                        <a href="docs/CV Shienny Hadi.docx" download=""><button>DOWNLOAD CV</button></a>
+                        <a href="#contactme"><button>CONTACT ME</button></a>
                     </div>
                 </div>
-                <div class="aboutme-desc">
-                    With over 5 years of experience in software development, including roles as a Software Engineer at PT Bank Mandiri Tbk and a .NET Developer at Freeport Indonesia, I specialize in creating scalable applications using the .NET Framework. I have successfully led projects, contributed to Go-Live applications, and optimized systems with parameterized solutions. Holding a Bachelor's Degree in Informatics Engineering, I am a fast learner, team player, and detail-oriented coder, passionate about developing user-friendly and secure applications that add value to businesses and customers.
+            </div>
+        </div>
+
+        <div class="gotolink">
+            <a href="#aboutme">Get to know me</a><br />
+            <img src="images/arrow-down.gif" width="32px" />
+        </div>
+    </section>
+    <section id="aboutme">
+        <div class="container-maxvh aboutme-container d-flex justify-content-center align-items-center">
+            <div class="aboutme-sub-container d-flex justify-content-center align-items-center">
+                <div class="aboutme-info flex-grow-1 ms-3">
+                    <h1 class="aboutme-title">About Me</h1>
+                    <img class="aboutme-mark" src="images/circle-dark.png" />
+                    <div class="d-flex justify-content-center">
+                        <div class="box-info box-first">
+                            <img src="images/exp.png" width="32px" />
+                            <br />
+                            <span class="box-info-title">Experience</span>
+                            <br />
+                            5+ Years
+                            <br />
+                            Fullstack Development
+                        </div>
+                        <div class="box-info box-last">
+                            <img src="images/edu.png" width="32px" />
+                            <br />
+                            <span class="box-info-title">Education</span>
+                            <br />
+                            Bachelor of Informatics Engineering (S.Kom)
+                            <br />
+                            GPA 3.6/4.00 (Cum Laude)
+                        </div>
+                    </div>
+                    <div class="aboutme-desc">
+                        With over 5 years of experience in software development, including roles as a Software Engineer at PT Bank Mandiri Tbk and a .NET Developer at Freeport Indonesia, I specialize in creating scalable applications using the .NET Framework. I have successfully led projects, contributed to Go-Live applications, and optimized systems with parameterized solutions. Holding a Bachelor's Degree in Informatics Engineering, I am a fast learner, team player, and detail-oriented coder, passionate about developing user-friendly and secure applications that add value to businesses and customers.
+                    </div>
+                </div>
+                <div class="aboutme-img flex-shrink-0">
+                    <img src="images/profiles/profile2.jpg" />
                 </div>
             </div>
-            <div class="aboutme-img flex-shrink-0">
-                <img src="images/profiles/profile2.jpg" />
-            </div>
         </div>
-    </div>
-    <div class="gotolink">
-        <a href="#skills">Discover my skills</a><br />
-        <img src="images/arrow-down.gif" width="32px" />
-    </div>
-</section>
-<section id="skills">
-    <div class="container-maxvh">
-        <h1 class="skills-title">Skills</h1>
-        <img class="skills-doodle" src="images/doodle.png" />
-        <br />
-        <div class="skills-chips d-flex justify-content-center">
-            @foreach (var cat in skillCategories)
-            {
-                <div class="chip-info @(cat.IsSelected? "chip-info-checked" : "")" id="chip@(cat.Id)">
-                    <input id="@("cb_"+cat.Id)" aria-label="@cat.Id" class="chip-info-cb" type="checkbox" @bind="@cat.IsSelected" />
-                    <label for="@("cb_"+cat.Id)">@cat.Name</label>
-                </div>
-            }
+        <div class="gotolink">
+            <a href="#skills">Discover my skills</a><br />
+            <img src="images/arrow-down.gif" width="32px" />
         </div>
-        <div style="width:100%">
-            <div class="skills-search">
-                <div class="input-group mb-3">
-                    <input type="text" @bind="searchSkill" class="form-control" placeholder="Search Skill" aria-label="Search Skill" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">SEARCH</button>
-                </div>
-            </div>
-        </div>
-        <div class="skills-results">
-            <div class="d-flex flex-wrap justify-content-center w-100">
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="JavaScript" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="Fast Learner" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-            </div>
-        </div>
-    </div>    
-    <div class="gotolink">
-        <a href="#projects">Check out my projects</a><br />
-        <img src="images/arrow-down.gif" width="32px" />
-    </div>
-</section>
-<section id="projects">
-    <div class="container-maxvh">
-        <div class="projects-header">
-            <h1 class="projects-title">Projects</h1>
-            <p>Here are some of the projects I worked on</p>
-            <img class="projects-doodle" src="images/lines.png" />
-        </div>
-        <br />
-        @* todo *@
-        @* <select>
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="net">NET</option>
-            <option value="csharp">C#</option>
-        </select> *@
-        @* <MultiSelect Options="_items" @bind-SelectedOptions="_selectedItems"/> *@
-        <div class="projects-result">
-            <div class="d-flex flex-wrap justify-content-center w-100">
-                @foreach (var p in projects)
+    </section>
+    <section id="skills">
+        <div class="container-maxvh">
+            <h1 class="skills-title">Skills</h1>
+            <img class="skills-doodle" src="images/doodle.png" />
+            <br />
+            <div class="skills-chips d-flex justify-content-center">
+                @foreach (var cat in MyProfile.Skill.Categories)
                 {
-                    <CardInfo payload="@p" />
+                    <div class="chip-info @(cat.IsSelected? "chip-info-checked" : "")" id="chip@(cat.Id)">
+                        <input id="@("cb_"+cat.Id)" aria-label="@cat.Id" class="chip-info-cb" type="checkbox" @bind="@cat.IsSelected" />
+                        <label for="@("cb_"+cat.Id)">@cat.Name</label>
+                    </div>
                 }
             </div>
-        </div>
-    </div>
-    <div class="gotolink">
-        <a href="#contactme">Get in Touch</a><br />
-        <img src="images/arrow-down.gif" width="32px" />
-    </div>
-</section>
-<section id="contactme" class="bg-brown">
-    <div class="contactme-container d-flex justify-content-center">
-        <div class="contactme-subcontainer">
-            <div class="contactme-header">
-                <h1 class="contactme-title">Let’s connect if you’re interested in working together.</h1>
-                <img src="images/circle-light.png" />
+            <div style="width:100%">
+                <div class="skills-search">
+                    <div class="input-group mb-3">
+                        <input type="text" @bind="searchSkill" class="form-control" placeholder="Search Skill" aria-label="Search Skill" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">SEARCH</button>
+                    </div>
+                </div>
             </div>
-            <hr />
-            <div class="d-flex contactme-group">
-                <div class="contactme-item">
-                    <div class="contactme-frame">
-                        <img src="images/linkedin.png" />
-                    </div>
-                    <div>
-                        <span class="contactme-item-name">LINKEDIN</span><br />
-                        <span class="contactme-item-info"><a href="https://www.linkedin.com/in/shiennyhadi/">Shienny Hadi</a></span>
-                    </div>
+            <div class="skills-results">
+                <div class="d-flex flex-wrap justify-content-center w-100">
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="JavaScript" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="Fast Learner" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
                 </div>
-                <div class="contactme-item">
-                    <div class="contactme-frame">
-                        <img src="images/email.png" />
-                    </div>
-                    <div>
-                        <span class="contactme-item-name">EMAIL</span><br />
-                        <span class="contactme-item-info">
-                            <a href="mailto:shiennymendeline97@gmail.com?body=Hello,%20Shienny%20Hadi">shiennymendeline97@gmail.com</a>
-                        </span>
-                    </div>
+            </div>
+        </div>
+        <div class="gotolink">
+            <a href="#projects">Check out my projects</a><br />
+            <img src="images/arrow-down.gif" width="32px" />
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container-maxvh">
+            <div class="projects-header">
+                <h1 class="projects-title">Projects</h1>
+                <p>Here are some of the projects I worked on</p>
+                <img class="projects-doodle" src="images/lines.png" />
+            </div>
+            <br />
+            @* todo *@
+            @* <select>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="net">NET</option>
+        <option value="csharp">C#</option>
+        </select> *@
+            @* <MultiSelect Options="_items" @bind-SelectedOptions="_selectedItems"/> *@
+            <div class="projects-result">
+                <div class="d-flex flex-wrap justify-content-center w-100">
+                    @foreach (var p in projects)
+                    {
+                        <CardInfo payload="@p" />
+                    }
                 </div>
-                <div class="contactme-item">
-                    <div class="contactme-frame">
-                        <img src="images/phone.png" />
+            </div>
+        </div>
+        <div class="gotolink">
+            <a href="#contactme">Get in Touch</a><br />
+            <img src="images/arrow-down.gif" width="32px" />
+        </div>
+    </section>
+    <section id="contactme" class="bg-brown">
+        <div class="contactme-container d-flex justify-content-center">
+            <div class="contactme-subcontainer">
+                <div class="contactme-header">
+                    <h1 class="contactme-title">Let’s connect if you’re interested in working together.</h1>
+                    <img src="images/circle-light.png" />
+                </div>
+                <hr />
+                <div class="d-flex contactme-group">
+                    <div class="contactme-item">
+                        <div class="contactme-frame">
+                            <img src="images/linkedin.png" />
+                        </div>
+                        <div>
+                            <span class="contactme-item-name">LINKEDIN</span><br />
+                            <span class="contactme-item-info"><a href="https://www.linkedin.com/in/shiennyhadi/">Shienny Hadi</a></span>
+                        </div>
                     </div>
-                    <div>
-                        <span class="contactme-item-name">PHONE</span><br />
-                        <div class="d-flex">
-                            <div id="callCountryFrame">
-                                <img src="images/id-flag.png" id="callCountry" alt="Description" title="Indonesia" />
+                    <div class="contactme-item">
+                        <div class="contactme-frame">
+                            <img src="images/email.png" />
+                        </div>
+                        <div>
+                            <span class="contactme-item-name">EMAIL</span><br />
+                            <span class="contactme-item-info">
+                                <a href="mailto:shiennymendeline97@gmail.com?body=Hello,%20Shienny%20Hadi">shiennymendeline97@gmail.com</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="contactme-item">
+                        <div class="contactme-frame">
+                            <img src="images/phone.png" />
+                        </div>
+                        <div>
+                            <span class="contactme-item-name">PHONE</span><br />
+                            <div class="d-flex">
+                                <div id="callCountryFrame">
+                                    <img src="images/id-flag.png" id="callCountry" alt="Description" title="Indonesia" />
+                                </div>
+                                <span class="contactme-item-info"><a href="https://wa.me/+6281330251997">(+62) 813-3025-1997</a></span>
                             </div>
-                            <span class="contactme-item-info"><a href="https://wa.me/+6281330251997">(+62) 813-3025-1997</a></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="bg-brown">
-        <a href="#profile" id="backToTop">
-            <img src="images/back-to-top.png" width="50px" />
-        </a>
-    </div>
-</section>
-<div class="footer bg-brown">Copyright © 2025 Shienny Hadi. All Rights Reserved.</div>
+        <div class="bg-brown">
+            <a href="#profile" id="backToTop">
+                <img src="images/back-to-top.png" width="50px" />
+            </a>
+        </div>
+    </section>
+    <div class="footer bg-brown">Copyright © 2025 Shienny Hadi. All Rights Reserved.</div>
+}

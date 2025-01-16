@@ -1,8 +1,11 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
+using MudBlazor;
+using Newtonsoft.Json;
 using shiennymendeline.github.io.Models;
 using shiennymendeline.github.io.Services;
 using System.Net.Http.Json;
+using System.Text.Json.Serialization;
 using static shiennymendeline.github.io.Pages.Weather;
 using static System.Net.WebRequestMethods;
 
@@ -12,21 +15,20 @@ namespace shiennymendeline.github.io.Pages
     {
         [Inject] IJSService JSService { get; set; } = default!;
         [Inject] HttpClient Http { get; set; } = default!;
-
+        [Inject] ISnackbar Snackbar { get; set; } = default!;
+        public MyProfile? MyProfile { get; set; } = null;
         
-        public MyProfile myProfile { get; set; } = new MyProfile();
-
         public string searchSkill { get; set; } = "";
         public List<string> selectedSkillsForProject { get; set; } = new List<string>();
-        public List<ItemOption> skillCategories { get; set; } = new()
-        {
-            new("all", "ALL", true),
-            new("fe", "FRONT END"),
-            new("be", "BACK END"),
-            new("db", "DATABASE"),
-            new("vc", "VERSION CONTROL"),
-            new("ss", "SOFT SKILLS")
-        };
+        //public List<ItemOption> skillCategories { get; set; } = new()
+        //{
+        //    new("all", "ALL", true),
+        //    new("fe", "FRONT END"),
+        //    new("be", "BACK END"),
+        //    new("db", "DATABASE"),
+        //    new("vc", "VERSION CONTROL"),
+        //    new("ss", "SOFT SKILLS")
+        //};
         public List<CardInfoItem> projects = new List<CardInfoItem>()
         {
             new CardInfoItem()
@@ -43,10 +45,22 @@ namespace shiennymendeline.github.io.Pages
 
         protected async override Task OnInitializedAsync()
         {
-            myProfile = await Http.GetFromJsonAsync<MyProfile>("data/profileinfo.json");
-            if (myProfile == null)
+            try
             {
-                
+                MyProfile = await Http.GetFromJsonAsync<MyProfile>("data/profileinfo.json");
+                if (MyProfile == null)
+                {
+                    Snackbar.Add("Failed to load profile data", Severity.Error);
+                    return;
+                }
+                else
+                {
+                    MyProfile.Skill.Categories.Insert(0, new ItemOption("all", MyProfile.Skill.AllInfo, true));
+                }
+            }
+            catch
+            {
+                Snackbar.Add("Failed to load profile data", Severity.Error);
             }
         }
 
