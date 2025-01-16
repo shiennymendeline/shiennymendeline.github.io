@@ -12,6 +12,10 @@ namespace shiennymendeline.github.io.Pages
     {
         [Inject] IJSService JSService { get; set; } = default!;
         [Inject] HttpClient Http { get; set; } = default!;
+
+        
+        public MyProfile myProfile { get; set; } = new MyProfile();
+
         public string searchSkill { get; set; } = "";
         public List<string> selectedSkillsForProject { get; set; } = new List<string>();
         public List<ItemOption> skillCategories { get; set; } = new()
@@ -39,7 +43,11 @@ namespace shiennymendeline.github.io.Pages
 
         protected async override Task OnInitializedAsync()
         {
-            await Http.GetFromJsonAsync<WeatherForecast[]>("data/profileinfo.json");
+            myProfile = await Http.GetFromJsonAsync<MyProfile>("data/profileinfo.json");
+            if (myProfile == null)
+            {
+                
+            }
         }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
