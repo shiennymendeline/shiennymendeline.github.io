@@ -65,28 +65,10 @@
     ],
     "items": [
       {
-        "category": "fe",
-        "name": "HTML",
+        "category": "be",
+        "name": ".NET",
         "level": "Experienced",
-        "iconImg": "html.png"
-      },
-      {
-        "category": "fe",
-        "name": "CSS",
-        "level": "Experienced",
-        "iconImg": "css.png"
-      },
-      {
-        "category": "fe",
-        "name": "JavaScript",
-        "level": "Experienced",
-        "iconImg": "js.png"
-      },
-      {
-        "category": "fe",
-        "name": "React",
-        "level": "Experienced",
-        "iconImg": "react.png"
+        "iconImg": "dotnet.png"
       },
       {
         "category": "be",
@@ -96,15 +78,45 @@
       },
       {
         "category": "be",
-        "name": ".NET",
+        "name": "ASP .NET",
         "level": "Experienced",
-        "iconImg": "dotnet.png"
+        "iconImg": "asp.png"
+      },
+      {
+        "category": "fe",
+        "name": "HTML",
+        "level": "Experienced",
+        "iconImg": "html.png"
+      },
+      {
+        "category": "fe",
+        "name": "CSS",
+        "level": "Intermediate",
+        "iconImg": "css.png"
+      },
+      {
+        "category": "fe",
+        "name": "Mudblazor",
+        "level": "Intermediate",
+        "iconImg": "mudblazor.png"
+      },
+      {
+        "category": "fe",
+        "name": "JavaScript",
+        "level": "Experienced",
+        "iconImg": "js.png"
+      },
+      {
+        "category": "fe",
+        "name": "JQuery",
+        "level": "Experienced",
+        "iconImg": "jquery.png"
       },
       {
         "category": "be",
-        "name": "Node.js",
-        "level": "Experienced",
-        "iconImg": "nodejs.png"
+        "name": "JAVA",
+        "level": "Intermediate",
+        "iconImg": "java.png"
       },
       {
         "category": "db",
@@ -114,9 +126,9 @@
       },
       {
         "category": "db",
-        "name": "MongoDB",
+        "name": "Oracle",
         "level": "Experienced",
-        "iconImg": "mongodb.png"
+        "iconImg": "oracle.png"
       },
       {
         "category": "tools",
@@ -126,9 +138,9 @@
       },
       {
         "category": "tools",
-        "name": "Docker",
+        "name": "JIRA",
         "level": "Experienced",
-        "iconImg": "docker.png"
+        "iconImg": "git.png"
       },
       {
         "category": "ss",
@@ -138,22 +150,17 @@
       },
       {
         "category": "ss",
-        "name": "Teamwork",
+        "name": "Fast Learner",
         "level": "Experienced",
-        "iconImg": "teamwork.png"
-      },
-      {
-        "category": "ss",
-        "name": "Communication",
-        "level": "Experienced",
-        "iconImg": "communication.png"
+        "iconImg": "fast-learner.png"
       }
     ],
     "gotoLink": "Check out my projects"
   },
-  "projects": {
+  "project": {
     "title": "Projects",
     "caption": "Here are some of the projects I worked on",
+    "selecAllText": "All",
     "items": [
       {
         "title": "Langlang Buana",

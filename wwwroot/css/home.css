@@ -149,11 +149,37 @@
     margin: 10px 20px 0 0;
 }
 
+.skills-searchsubc {
+    width: fit-content;
+}
+
 .skills-results {
+    clear: both;
     margin-top: 4%;
     max-height: 66%;
     overflow-y: scroll;
 }
+
+.skills-item-status {
+    font-size: 14pt;
+}
+
+.skills-searchtxt {
+    background-color: var(--white);
+    width: 10%;
+}
+
+.skills-searchbtn {
+    background-color: var(--brown);
+    color: var(--oat);
+}
+    .skills-searchbtn:hover {
+        background-color: var(--taupe);
+    }
+    .skills-searchbtn:active {
+        background-color: var(--darkbrown);
+    }
+
 
 /* PROJECTS */
 .projects-title {
@@ -299,28 +325,36 @@
 
 /* COMPONENT : BoxInfoSimple */
 .boxinfosimple-item {
-    margin: 10px;
+    margin: 8px;
     padding: 10px;
-    width: 16%;
+    width: 25%;
     border: 2px solid #1e1815;
     background-color: white;
     border-radius: 6px;
 }
 
-    .boxinfosimple-item img {
-        width: 50px;
-        object-fit: contain;
-    }
-
 .boxinfosimple-item-name {
     font-weight: bold;
-    font-size: 18pt;
+    font-size: 20pt;
 }
 
-.skills-item-status {
+.boxinfosimple-item-status {
     font-size: 14pt;
 }
-
+.boxinfosimple-frame {
+    background-color: var(--brown);
+    display: flex;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+    .boxinfosimple-frame img {
+        height: 30px;
+        object-fit: contain;
+    }
 /* COMPONENT : CHIP INFO */
 .chip-info {
     /*background-color: var(--brown);*/

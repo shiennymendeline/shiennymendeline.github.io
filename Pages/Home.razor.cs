@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 using MudBlazor;
 using Newtonsoft.Json;
@@ -20,28 +21,24 @@ namespace shiennymendeline.github.io.Pages
         
         public string searchSkill { get; set; } = "";
         public List<string> selectedSkillsForProject { get; set; } = new List<string>();
-        //public List<ItemOption> skillCategories { get; set; } = new()
-        //{
-        //    new("all", "ALL", true),
-        //    new("fe", "FRONT END"),
-        //    new("be", "BACK END"),
-        //    new("db", "DATABASE"),
-        //    new("vc", "VERSION CONTROL"),
-        //    new("ss", "SOFT SKILLS")
-        //};
-        public List<CardInfoItem> projects = new List<CardInfoItem>()
+        public List<CardInfoItem> projects = new List<CardInfoItem>();
+        public List<SkillItem> SkillItems = new List<SkillItem>();
+        private bool _processing = false;
+
+
+
+        private string value { get; set; } = "Nothing selected";
+        private IEnumerable<string> options { get; set; } = new HashSet<string>() { "Lion" };
+
+        private string[] felines =
         {
-            new CardInfoItem()
-            {
-                ImgPath = "images/projects/project_pabrikgula.jpg",
-                Title = "Langlang Buana",
-                Caption = "A Platform for Travelers to Share Global Travel Insights",
-                ButtonPrimaryName = "GITHUB",
-                ButtonPrimaryLink = "#",
-                ButtonSecondaryName = "VIDEO",
-                ButtonSecondaryLink = "#"
-            }
-        };
+        "Jaguar", "Leopard", "Lion", "Lynx", "Panther", "Puma", "Tiger"
+    };
+
+        private string GetMultiSelectionText(List<string> selectedValues)
+        {
+            return $"{selectedValues.Count} feline{(selectedValues.Count > 1 ? "s have" : " has")} been selected";
+        }
 
         protected async override Task OnInitializedAsync()
         {
@@ -56,12 +53,26 @@ namespace shiennymendeline.github.io.Pages
                 else
                 {
                     SetupSkillCategories();
+                    SetupSkillItems();
                     SetupProfileInfo();
+                    await JSService.InitializeListeners();
                 }
             }
             catch
             {
                 Snackbar.Add("Failed to load profile data", Severity.Error);
+            }
+        }
+
+        private void SetupSkillItems(string searchText = "")
+        {
+            if (string.IsNullOrEmpty(searchText))
+            {
+                SkillItems = MyProfile.Skill.Items;
+            }
+            else
+            {
+                SkillItems = MyProfile.Skill.Items.Where(x => x.Name.Contains(searchText, StringComparison.OrdinalIgnoreCase)).ToList();
             }
         }
 
@@ -76,12 +87,51 @@ namespace shiennymendeline.github.io.Pages
             MyProfile.Skill.Categories.Insert(0, new ItemOption("all", MyProfile.Skill.AllInfo, true));
         }
 
+        public void SearchSkillsByKeyword()
+        {
+            _processing = true;
+            SetupSkillItems(searchSkill);
+            _processing = false;
+            StateHasChanged();
+        }
+
+        public void ClearSearchSkill()
+        {
+            searchSkill = "";
+            SetupSkillItems();
+        }
+
+        public void OnKeyUpSearchSkill(KeyboardEventArgs e)
+        {
+            if (e.Key == "Enter")
+            {
+                SearchSkillsByKeyword();
+            }
+        }
+
+        //public Task OnValueChangedCheckboxSkillCat(string category)
+        //{
+        //    if (category == "all")
+        //    {
+        //        SetupSkillItems();
+        //    }
+        //    else
+        //    {
+        //        SetupSkillItems().Where(x => x.Category == category).ToList();
+        //    }
+        //}
+        private void OnCategorySelected(string categoryId, bool isSelected)
+        {
+            Console.WriteLine($"Category ID {categoryId} selected: {isSelected}");
+        }
+
+
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             if (firstRender)
             {
-                await JSService.InitializeListeners();
             }
+            await JSService.InitializeListeners();
         }
     }
 }

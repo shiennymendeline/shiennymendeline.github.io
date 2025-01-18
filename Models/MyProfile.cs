@@ -36,7 +36,7 @@
         public string TextSearch { get; set; }
         public string AllInfo { get; set; }
         public List<ItemOption> Categories { get; set; }
-        public List<SkillItem> Skills { get; set; }
+        public List<SkillItem> Items { get; set; }
         public string GotoLink { get; set; }
     }
 
@@ -44,7 +44,8 @@
     {
         public string Title { get; set; }
         public string Caption { get; set; }
-        public List<ProjectItem> Items { get; set; }
+        public string SelecAllText { get; set; }
+        public List<CardInfoItem> Items { get; set; }
         public string GotoLink { get; set; }
     }
 
@@ -63,13 +64,6 @@
         public string SecondaryImg { get; set; }
     }
 
-    public class ProjectItem
-    {
-        public string Title { get; set; }
-        public string Caption { get; set; }
-        public string ImgPath { get; set; }
-        public List<LinkInfo> Links { get; set; }
-    }
 
     public class SkillItem
     {

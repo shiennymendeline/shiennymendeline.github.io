@@ -5,7 +5,9 @@
     <span class="cardinfo-item-title">@payload.Title</span><br />
     <span class="cardinfo-item-caption">@payload.Caption</span><br />
     <div class="d-flex cardinfo-buttons justify-content-center">
-        <a class="w-100" href="@payload.ButtonPrimaryLink"><button class="w-100">@payload.ButtonPrimaryName</button></a>
-        <a class="w-100" href="@payload.ButtonSecondaryLink"><button class="w-100">@payload.ButtonSecondaryName</button></a>
+        @foreach (var link in payload.Links)
+        {
+            <a class="w-100" href="@link.Link"><button class="w-100">@link.LinkName</button></a>
+        }
     </div>
 </div>

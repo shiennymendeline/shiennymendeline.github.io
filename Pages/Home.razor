@@ -21,7 +21,7 @@
                         @((MarkupString)MyProfile.Profile.Summary)
                     </div>
                     <div class="profile-buttons d-flex justify-content-center align-items-center">
-                        
+
                         @foreach (var link in MyProfile.Profile.Links)
                         {
                             <MudLink Class="btn" Href="@link.Link">@link.LinkName</MudLink>
@@ -50,7 +50,7 @@
                         }
                     </div>
                     <div class="aboutme-desc">
-                        @MyProfile.Aboutme.Description                        
+                        @MyProfile.Aboutme.Description
                     </div>
                 </div>
                 <div class="aboutme-img flex-shrink-0">
@@ -65,7 +65,7 @@
     </section>
     <section id="skills">
         <div class="container-maxvh">
-            <h1 class="skills-title">Skills</h1>
+            <h1 class="skills-title">@MyProfile.Skill.Title</h1>
             <img class="skills-doodle" src="images/doodle.png" />
             <br />
             <div class="skills-chips d-flex justify-content-center">
@@ -77,54 +77,58 @@
                     </div>
                 }
             </div>
-            <div style="width:100%">
-                <div class="skills-search">
-                    <div class="input-group mb-3">
-                        <input type="text" @bind="searchSkill" class="form-control" placeholder="Search Skill" aria-label="Search Skill" aria-describedby="button-addon2">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">SEARCH</button>
+            @* <div class="skills-chips d-flex justify-content-center">
+        @foreach (var cat in MyProfile.Skill.Categories)
+        {
+        <MudChip Class="@(cat.IsSelected ? "chip-info chip-info-checked" : "chip-info")" @key="cat.Id" T="string">
+        <MudCheckBox @bind-Checked="cat.IsSelected"
+        T="bool"
+        ValueChanged="@(newValue => OnCategorySelected(cat.Id, newValue))"
+        Id="@("cb_" + cat.Id)"
+        Color="Color.Primary"
+        AriaLabel="@cat.Name" />
+        <label for="@("cb_" + cat.Id)">@cat.Name</Label>
+        </MudChip>
+        }
+        </div> *@
+
+            <div class="skills-search">
+                <div class="d-flex flex-row-reverse flex-grow-1 gap-4">
+                    <div class="input-group mb-3 skills-searchsubc">
+                        <MudTextField @bind-Value="searchSkill" Class="skills-searchtxt" Placeholder="@MyProfile.Skill.PlaceholderSearch" Variant="Variant.Outlined" Clearable="true" OnClearButtonClick="ClearSearchSkill" OnKeyUp="OnKeyUpSearchSkill" />
+                        <MudButton Disabled="@_processing" OnClick="SearchSkillsByKeyword" Variant="Variant.Filled" Class="skills-searchbtn" DropShadow="false" Size="Size.Small">
+                            @if (_processing)
+                            {
+                                <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                            }
+                            else
+                            {
+                                <MudText>@MyProfile.Skill.TextSearch</MudText>
+                            }
+                        </MudButton>
                     </div>
                 </div>
+
             </div>
             <div class="skills-results">
                 <div class="d-flex flex-wrap justify-content-center w-100">
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="JavaScript" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="Fast Learner" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
-                    <BoxInfoSimple Name="NET" Caption="Experienced" ImgPath="@AppConstant.VerifiedImgPath" />
+                    @foreach (var s in SkillItems)
+                    {
+                        <BoxInfoSimple Name="@s.Name" Caption="@s.Level" ImgPath="@($"images/icon/{s.IconImg}")" />
+                    }
                 </div>
             </div>
         </div>
         <div class="gotolink">
-            <a href="#projects">Check out my projects</a><br />
+            <a href="#projects">@MyProfile.Skill.GotoLink</a><br />
             <img src="images/arrow-down.gif" width="32px" />
         </div>
     </section>
     <section id="projects">
         <div class="container-maxvh">
             <div class="projects-header">
-                <h1 class="projects-title">Projects</h1>
-                <p>Here are some of the projects I worked on</p>
+                <h1 class="projects-title">@MyProfile.Project.Title</h1>
+                <p>@MyProfile.Project.Caption</p>
                 <img class="projects-doodle" src="images/lines.png" />
             </div>
             <br />
@@ -135,7 +139,15 @@
         <option value="net">NET</option>
         <option value="csharp">C#</option>
         </select> *@
-            @* <MultiSelect Options="_items" @bind-SelectedOptions="_selectedItems"/> *@
+            <MudSelect T="string" MultiSelection="true" SelectAll="true" SelectAllText="@MyProfile.Project.SelecAllText"
+                       HelperText="@value" @bind-Value="value" @bind-SelectedValues="options"
+                       MultiSelectionTextFunc="@(new Func<List<string>, string>(GetMultiSelectionText))"
+                       Label="Felines" AdornmentIcon="@Icons.Material.Filled.Search">
+                @foreach (var feline in felines)
+                {
+                    <MudSelectItem T="string" Value="@feline">@feline</MudSelectItem>
+                }
+            </MudSelect>
             <div class="projects-result">
                 <div class="d-flex flex-wrap justify-content-center w-100">
                     @foreach (var p in projects)

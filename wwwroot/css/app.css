@@ -129,7 +129,7 @@ code {
 
 body {
     color: var(--black);
-    font-family: Carlito, Tahoma;
+    font-family: Carlito, Tahoma !important;
 }
 /* Regular weight */
 @font-face {
