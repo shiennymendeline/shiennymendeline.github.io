@@ -8,7 +8,7 @@ namespace shiennymendeline.github.io.Components
         private bool _processing = false;
         [Parameter] public string Placeholder { get; set; } = "";
         [Parameter] public string ButtonText { get; set; } = "";
-        [Parameter] public Action OnClickButtonEvent { get; set; }
+        [Parameter] public required Action OnClickButtonEvent { get; set; }
         public string SearchText { get; set; } = "";
         public void StartProcessing()
         {
