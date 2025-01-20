@@ -369,8 +369,8 @@
     font-size: 18pt;
 }
     .chip-info:hover {
-        background-color: var(--taupe);
-        color: var(--white);
+        background-color: var(--taupe) !important;
+        color: var(--white) !important;
     }
 
     .chip-info:hover, .chip-info > label:hover {

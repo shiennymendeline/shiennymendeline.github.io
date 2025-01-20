@@ -68,30 +68,17 @@
             <h1 class="skills-title">@MyProfile.Skill.Title</h1>
             <img class="skills-doodle" src="images/doodle.png" />
             <br />
-            <div class="skills-chips d-flex justify-content-center">
+            <MudChipSet T="bool" Class="skills-chips d-flex justify-content-center">
                 @foreach (var cat in MyProfile.Skill.Categories)
                 {
-                    <div class="chip-info @(cat.IsSelected? "chip-info-checked" : "")" id="chip@(cat.Id)">
-                        <input id="@("cb_"+cat.Id)" aria-label="@cat.Id" class="chip-info-cb" type="checkbox" @bind="@cat.IsSelected" />
-                        <label for="@("cb_"+cat.Id)">@cat.Name</label>
-                    </div>
+                    <MudChip T="bool" Class="@(cat.IsSelected ? "chip-info chip-info-checked" : "chip-info")"
+                             Variant="Variant.Filled"
+                             Selected="@cat.IsSelected">
+                        <MudCheckBox Value="cat.IsSelected"
+                                     T="bool" Label="@cat.Name" ValueChanged="@(value => OnCheckboxChanged(cat.Id, value))" />
+                    </MudChip>
                 }
-            </div>
-            @* <div class="skills-chips d-flex justify-content-center">
-        @foreach (var cat in MyProfile.Skill.Categories)
-        {
-        <MudChip Class="@(cat.IsSelected ? "chip-info chip-info-checked" : "chip-info")" @key="cat.Id" T="string">
-        <MudCheckBox @bind-Checked="cat.IsSelected"
-        T="bool"
-        ValueChanged="@(newValue => OnCategorySelected(cat.Id, newValue))"
-        Id="@("cb_" + cat.Id)"
-        Color="Color.Primary"
-        AriaLabel="@cat.Name" />
-        <label for="@("cb_" + cat.Id)">@cat.Name</Label>
-        </MudChip>
-        }
-        </div> *@
-
+            </MudChipSet>
             <div class="skills-search">
                 <div class="d-flex flex-row-reverse flex-grow-1 gap-4">
                     <div class="input-group mb-3 skills-searchsubc">

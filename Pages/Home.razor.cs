@@ -66,14 +66,12 @@ namespace shiennymendeline.github.io.Pages
 
         private void SetupSkillItems(string searchText = "")
         {
-            if (string.IsNullOrEmpty(searchText))
-            {
-                SkillItems = MyProfile.Skill.Items;
-            }
-            else
-            {
-                SkillItems = MyProfile.Skill.Items.Where(x => x.Name.Contains(searchText, StringComparison.OrdinalIgnoreCase)).ToList();
-            }
+            var arr = MyProfile.Skill.Categories.Where(y => y.IsSelected).Select(y => y.Id);
+
+            SkillItems = MyProfile.Skill.Items
+                                  .Where(x => x.Name.Contains(searchText, StringComparison.OrdinalIgnoreCase))
+                                  .Where(x => arr.Contains(x.Category) || arr.Contains("all"))
+                                  .ToList();
         }
 
         private void SetupProfileInfo()
@@ -109,29 +107,20 @@ namespace shiennymendeline.github.io.Pages
             }
         }
 
-        //public Task OnValueChangedCheckboxSkillCat(string category)
-        //{
-        //    if (category == "all")
-        //    {
-        //        SetupSkillItems();
-        //    }
-        //    else
-        //    {
-        //        SetupSkillItems().Where(x => x.Category == category).ToList();
-        //    }
-        //}
-        private void OnCategorySelected(string categoryId, bool isSelected)
+        private void OnCheckboxChanged(string id, bool value)
         {
-            Console.WriteLine($"Category ID {categoryId} selected: {isSelected}");
-        }
-
-
-        protected override async Task OnAfterRenderAsync(bool firstRender)
-        {
-            if (firstRender)
+            if (id == "all")
             {
+                MyProfile.Skill.Categories.ForEach(x => x.IsSelected = !value);
+                MyProfile.Skill.Categories[0].IsSelected = value;
             }
-            await JSService.InitializeListeners();
+            else
+            {
+                MyProfile.Skill.Categories.Where(x => x.Id == id).First().IsSelected = value;
+                MyProfile.Skill.Categories[0].IsSelected = false;
+            }
+            SetupSkillItems(searchSkill);
         }
+
     }
 }
