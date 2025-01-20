@@ -1,0 +1,19 @@
+﻿<div class="igb-search">
+    <div class="d-flex flex-row-reverse flex-grow-1 gap-4">
+        <div class="input-group mb-3 igb-searchsubc">
+            <MudTextField @bind-Value="@SearchText" Class="igb-searchtxt" Placeholder="@Placeholder" Variant="Variant.Outlined" Clearable="true" 
+                          OnClearButtonClick="ClearSearch" OnKeyUp="OnKeyUpSearch" />
+            <MudButton Disabled="@_processing" OnClick="CallActionClick" Variant="Variant.Filled" Class="igb-searchbtn" DropShadow="false" Size="Size.Small">
+                @if (_processing)
+                {
+                    <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                }
+                else
+                {
+                    <MudText>@ButtonText</MudText>
+                }
+            </MudButton>
+        </div>
+    </div>
+</div>
+

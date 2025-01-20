@@ -143,13 +143,13 @@
     left: 46%
 }
 
-.skills-search {
+.igb-search {
     width: fit-content;
     float: right;
     margin: 10px 20px 0 0;
 }
 
-.skills-searchsubc {
+.igb-searchsubc {
     width: fit-content;
 }
 
@@ -164,19 +164,19 @@
     font-size: 14pt;
 }
 
-.skills-searchtxt {
+.igb-searchtxt {
     background-color: var(--white);
     width: 10%;
 }
 
-.skills-searchbtn {
+.igb-searchbtn {
     background-color: var(--brown);
     color: var(--oat);
 }
-    .skills-searchbtn:hover {
+    .igb-searchbtn:hover {
         background-color: var(--taupe);
     }
-    .skills-searchbtn:active {
+    .igb-searchbtn:active {
         background-color: var(--darkbrown);
     }
 

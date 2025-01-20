@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 using MudBlazor;
 using Newtonsoft.Json;
+using shiennymendeline.github.io.Components;
 using shiennymendeline.github.io.Models;
 using shiennymendeline.github.io.Services;
+using System.Linq;
 using System.Net.Http.Json;
 using System.Text.Json.Serialization;
 using static shiennymendeline.github.io.Pages.Weather;
@@ -19,12 +21,12 @@ namespace shiennymendeline.github.io.Pages
         [Inject] ISnackbar Snackbar { get; set; } = default!;
         public MyProfile MyProfile { get; set; } = default!;
         
-        public string searchSkill { get; set; } = "";
+        //public string searchSkill { get; set; } = "";
         public List<string> selectedSkillsForProject { get; set; } = new List<string>();
         public List<CardInfoItem> projects = new List<CardInfoItem>();
         public List<SkillItem> SkillItems = new List<SkillItem>();
-        private bool _processing = false;
 
+        InputGroupButton IgbSearchSkill = new();
 
 
         private string value { get; set; } = "Nothing selected";
@@ -64,14 +66,15 @@ namespace shiennymendeline.github.io.Pages
             }
         }
 
-        private void SetupSkillItems(string searchText = "")
+        private void SetupSkillItems()
         {
             var arr = MyProfile.Skill.Categories.Where(y => y.IsSelected).Select(y => y.Id);
 
             SkillItems = MyProfile.Skill.Items
-                                  .Where(x => x.Name.Contains(searchText, StringComparison.OrdinalIgnoreCase))
+                                  .Where(x => x.Name.Contains(IgbSearchSkill.SearchText, StringComparison.OrdinalIgnoreCase))
                                   .Where(x => arr.Contains(x.Category) || arr.Contains("all"))
                                   .ToList();
+            StateHasChanged();
         }
 
         private void SetupProfileInfo()
@@ -83,28 +86,6 @@ namespace shiennymendeline.github.io.Pages
         private void SetupSkillCategories()
         {
             MyProfile.Skill.Categories.Insert(0, new ItemOption("all", MyProfile.Skill.AllInfo, true));
-        }
-
-        public void SearchSkillsByKeyword()
-        {
-            _processing = true;
-            SetupSkillItems(searchSkill);
-            _processing = false;
-            StateHasChanged();
-        }
-
-        public void ClearSearchSkill()
-        {
-            searchSkill = "";
-            SetupSkillItems();
-        }
-
-        public void OnKeyUpSearchSkill(KeyboardEventArgs e)
-        {
-            if (e.Key == "Enter")
-            {
-                SearchSkillsByKeyword();
-            }
         }
 
         private void OnCheckboxChanged(string id, bool value)
@@ -119,7 +100,7 @@ namespace shiennymendeline.github.io.Pages
                 MyProfile.Skill.Categories.Where(x => x.Id == id).First().IsSelected = value;
                 MyProfile.Skill.Categories[0].IsSelected = false;
             }
-            SetupSkillItems(searchSkill);
+            SetupSkillItems();
         }
 
     }

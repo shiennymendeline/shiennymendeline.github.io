@@ -79,24 +79,10 @@
                     </MudChip>
                 }
             </MudChipSet>
-            <div class="skills-search">
-                <div class="d-flex flex-row-reverse flex-grow-1 gap-4">
-                    <div class="input-group mb-3 skills-searchsubc">
-                        <MudTextField @bind-Value="searchSkill" Class="skills-searchtxt" Placeholder="@MyProfile.Skill.PlaceholderSearch" Variant="Variant.Outlined" Clearable="true" OnClearButtonClick="ClearSearchSkill" OnKeyUp="OnKeyUpSearchSkill" />
-                        <MudButton Disabled="@_processing" OnClick="SearchSkillsByKeyword" Variant="Variant.Filled" Class="skills-searchbtn" DropShadow="false" Size="Size.Small">
-                            @if (_processing)
-                            {
-                                <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
-                            }
-                            else
-                            {
-                                <MudText>@MyProfile.Skill.TextSearch</MudText>
-                            }
-                        </MudButton>
-                    </div>
-                </div>
-
-            </div>
+            <InputGroupButton @ref="IgbSearchSkill" 
+                              Placeholder="@MyProfile.Skill.PlaceholderSearch"
+                              ButtonText="@MyProfile.Skill.TextSearch"
+                              OnClickButtonEvent="SetupSkillItems" />
             <div class="skills-results">
                 <div class="d-flex flex-wrap justify-content-center w-100">
                     @foreach (var s in SkillItems)
