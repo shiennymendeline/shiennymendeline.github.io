@@ -3,5 +3,6 @@
     public static class AppConstant
     {
         public static readonly string VerifiedImgPath = "images/verify.png";
+        public static readonly string MsgNoSelected = "Nothing selected";
     }
 }

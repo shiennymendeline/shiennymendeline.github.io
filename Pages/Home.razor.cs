@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using shiennymendeline.github.io.Components;
 using shiennymendeline.github.io.Models;
 using shiennymendeline.github.io.Services;
+using shiennymendeline.github.io.Utils;
 using System.Linq;
 using System.Net.Http.Json;
 using System.Text.Json.Serialization;
@@ -20,33 +21,19 @@ namespace shiennymendeline.github.io.Pages
         [Inject] HttpClient Http { get; set; } = default!;
         [Inject] ISnackbar Snackbar { get; set; } = default!;
         public MyProfile MyProfile { get; set; } = default!;
-        
-        //public string searchSkill { get; set; } = "";
-        public List<string> selectedSkillsForProject { get; set; } = new List<string>();
-        public List<CardInfoItem> projects = new List<CardInfoItem>();
-        public List<SkillItem> SkillItems = new List<SkillItem>();
-
         InputGroupButton IgbSearchSkill = new();
+        
+        public List<SkillItem> SkillItems = new List<SkillItem>();
+        public List<CardInfoItem> projects = new List<CardInfoItem>();
 
 
-        private string value { get; set; } = "Nothing selected";
-        private IEnumerable<string> options { get; set; } = new HashSet<string>() { "Lion" };
-
-        private string[] felines =
-        {
-        "Jaguar", "Leopard", "Lion", "Lynx", "Panther", "Puma", "Tiger"
-    };
-
-        private string GetMultiSelectionText(List<string> selectedValues)
-        {
-            return $"{selectedValues.Count} feline{(selectedValues.Count > 1 ? "s have" : " has")} been selected";
-        }
+        private IEnumerable<string> options { get; set; } = new HashSet<string>();
 
         protected async override Task OnInitializedAsync()
         {
             try
             {
-                MyProfile = await Http.GetFromJsonAsync<MyProfile>("data/profileinfo.json");
+                MyProfile = await Http.GetFromJsonAsync<MyProfile>($"data/profileinfo.json?{Guid.NewGuid()}");
                 if (MyProfile == null)
                 {
                     Snackbar.Add("Failed to load profile data", Severity.Error);
@@ -57,13 +44,20 @@ namespace shiennymendeline.github.io.Pages
                     SetupSkillCategories();
                     SetupSkillItems();
                     SetupProfileInfo();
-                    await JSService.InitializeListeners();
+                    SetupProjects();
+                    //await JSService.InitializeListeners();
                 }
             }
             catch
             {
                 Snackbar.Add("Failed to load profile data", Severity.Error);
             }
+        }
+
+        private void SetupProjects()
+        {
+            options = MyProfile.Skill.Items.Select(x => x.Name);
+            SearchProjects(options);
         }
 
         private void SetupSkillItems()
@@ -103,5 +97,28 @@ namespace shiennymendeline.github.io.Pages
             SetupSkillItems();
         }
 
+        private void SearchProjects(IEnumerable<string> selectedOptions)
+        {
+            options = selectedOptions;
+            projects = MyProfile.Project.Items.Where(x => x.Tags.Intersect(options).Any()).ToList();
+            StateHasChanged();
+        }
+        private string GetSelectedProjectSkillText(IEnumerable<string> selectedItems)
+        {
+            var count = selectedItems.Count();
+            if (count == 0 || count == MyProfile.Skill.Items.Count)
+            {
+                return MyProfile.Skill.AllInfo;
+            }
+            else if (count == 1)
+            {
+                return selectedItems.First();
+            }
+            else
+            {
+                return $"{count} skills selected";
+            }
+
+        }
     }
 }

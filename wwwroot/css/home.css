@@ -205,6 +205,7 @@
 .projects-result {
     max-height: 74%;
     overflow-y: scroll;
+    margin-top: 10px;
 }
 
 /* CONTACTME */
@@ -280,6 +281,12 @@
     height:  16px;
     object-fit: contain;
 }
+
+/* COMPONENT : IMS (INPUT MULTI SELECT) */
+.my-ims-container {
+    min-width: 12%;
+}
+
 /* COMPONENT : BOX INFO */
 .box-info {
     border: 1px solid var(--black);
@@ -307,7 +314,7 @@
 .cardinfo-item {
     font-family: Radley, Tahoma;
     text-align: center;
-    margin: 5px;
+    margin: 10px;
 }
 .cardinfo-item-title {
     font-style : italic;
@@ -315,13 +322,37 @@
 }
 .cardinfo-item img {
     width: 400px;
+    height: 300px;
+    object-fit: fill;
 }
     .cardinfo-item img:hover {
         cursor: zoom-in;
     }
-.cardinfo-buttons a {
-    margin: 5px;
+.cardinfo-buttons {
+
 }
+    .cardinfo-buttons a {
+        margin: 5px;
+        padding: 5px;
+        color: var(--black);
+        border: 2px solid var(--black);
+        background-color: var(--oat);
+    }
+
+        .cardinfo-buttons a:hover {
+            background-color: var(--taupe);
+            color: var(--white);
+        }
+
+        .cardinfo-buttons a:active {
+            background-color: var(--darkbrown);
+        }
+
+    .cardinfo-buttons button {
+        font-family: Carlito, Tahoma;
+        font-size: 14pt;
+        font-weight: bold;
+    }
 
 /* COMPONENT : BoxInfoSimple */
 .boxinfosimple-item {
