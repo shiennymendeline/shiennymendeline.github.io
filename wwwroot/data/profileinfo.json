@@ -216,19 +216,21 @@
         "header": "LINKEDIN",
         "linkname": "Shienny Hadi",
         "link": "https://www.linkedin.com/in/shiennyhadi/",
-        "iconImg": "linkedin.png"
+        "iconImg": "images/linkedin.png"
       },
       {
         "header": "EMAIL",
         "linkname": "shiennymendeline97@gmail.com",
         "link": "mailto:shiennymendeline97@gmail.com?body=Hello,%20Shienny%20Hadi",
-        "iconImg": "email.png"
+        "iconImg": "images/email.png"
       },
       {
         "header": "WhatsApp",
         "linkname": "(+62) 813-3025-1997",
         "link": "https://wa.me/+6281330251997",
-        "iconImg": "phone.png"
+        "iconImg": "images/phone.png",
+        "secondaryImg": "images/id-flag.png",
+        "secondaryImgAlt": "Indonesia"
       }
     ]
   },

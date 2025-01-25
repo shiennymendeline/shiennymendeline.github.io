@@ -1,4 +1,5 @@
-﻿<div class="cardinfo-item">
+﻿@using Newtonsoft.Json
+<div class="cardinfo-item">
     @* todo image bisa di-zoom *@
     <img src="@payload.ImgPath" />
     <br />
@@ -8,6 +9,12 @@
         @foreach (var link in payload.Links)
         {
             <a class="w-100" href="@link.Link" target="_blank"><button class="w-100">@link.LinkName</button></a>
+        }
+    </div>
+    <div>
+        @foreach (var tag in payload.Tags)
+        {
+            <MudChip Class="carlito-default" T="string" Size="Size.Small">@tag</MudChip>
         }
     </div>
 </div>

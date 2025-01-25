@@ -269,7 +269,7 @@
         font-style: italic;
     }
 
-#callCountryFrame {
+#secondaryImgFrame {
     width: 32px;
     height: 20px;
     display: flex;
@@ -277,7 +277,7 @@
     align-items: center;
     padding-top: 10px;
 }
-#callCountry {
+#secondaryImg {
     height:  16px;
     object-fit: contain;
 }
@@ -285,7 +285,12 @@
 /* COMPONENT : IMS (INPUT MULTI SELECT) */
 .my-ims-container {
     min-width: 12%;
+    margin: 10px 20px 0 0;
 }
+
+    .my-ims-container .mud-input-control {
+        background-color: var(--white);
+    }
 
 /* COMPONENT : BOX INFO */
 .box-info {

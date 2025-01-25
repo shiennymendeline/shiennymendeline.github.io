@@ -129,8 +129,13 @@ code {
 
 body {
     color: var(--black);
-    font-family: Carlito, Tahoma !important;
+    font-family: Carlito, Tahoma;
 }
+.carlito-default {
+    color: var(--black);
+    font-family: Carlito, Tahoma;
+}
+
 /* Regular weight */
 @font-face {
     font-family: 'Radley';
@@ -168,6 +173,10 @@ body {
 
 .bg-brown {
     background-color: var(--brown);
+}
+
+.bg-white {
+    background-color: var(--white) !important;
 }
 
 .btn {

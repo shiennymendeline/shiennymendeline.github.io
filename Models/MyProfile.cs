@@ -62,6 +62,7 @@
         public string Link { get; set; }
         public string IconImg { get; set; }
         public string SecondaryImg { get; set; }
+        public string SecondaryImgAlt { get; set; }
     }
 
 

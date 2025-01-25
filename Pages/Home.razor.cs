@@ -101,6 +101,7 @@ namespace shiennymendeline.github.io.Pages
         {
             options = selectedOptions;
             projects = MyProfile.Project.Items.Where(x => x.Tags.Intersect(options).Any()).ToList();
+            projects.ForEach(x => x.Tags = x.Tags.Intersect(options).ToArray());
             StateHasChanged();
         }
         private string GetSelectedProjectSkillText(IEnumerable<string> selectedItems)
@@ -108,7 +109,7 @@ namespace shiennymendeline.github.io.Pages
             var count = selectedItems.Count();
             if (count == 0 || count == MyProfile.Skill.Items.Count)
             {
-                return MyProfile.Skill.AllInfo;
+                return MyProfile.Project.SelecAllText;
             }
             else if (count == 1)
             {

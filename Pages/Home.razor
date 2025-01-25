@@ -113,7 +113,8 @@
                                    MultiSelectionTextFunc="GetSelectedProjectSkillText"
                                    SelectedValues="options"
                                    SelectedValuesChanged="SearchProjects"
-                                   Label="Skills" AdornmentIcon="@Icons.Material.Filled.Search">
+                                   AnchorOrigin="Origin.BottomCenter"
+                                   AdornmentIcon="@Icons.Material.Filled.FilterAlt">
                             @foreach (var item in MyProfile.Skill.Items)
                             {
                                 <MudSelectItem T="string" Value="@item.Name">@item.Name</MudSelectItem>
@@ -145,40 +146,34 @@
                 </div>
                 <hr />
                 <div class="d-flex contactme-group">
-                    <div class="contactme-item">
-                        <div class="contactme-frame">
-                            <img src="images/linkedin.png" />
-                        </div>
-                        <div>
-                            <span class="contactme-item-name">LINKEDIN</span><br />
-                            <span class="contactme-item-info"><a href="https://www.linkedin.com/in/shiennyhadi/">Shienny Hadi</a></span>
-                        </div>
-                    </div>
-                    <div class="contactme-item">
-                        <div class="contactme-frame">
-                            <img src="images/email.png" />
-                        </div>
-                        <div>
-                            <span class="contactme-item-name">EMAIL</span><br />
-                            <span class="contactme-item-info">
-                                <a href="mailto:shiennymendeline97@gmail.com?body=Hello,%20Shienny%20Hadi">shiennymendeline97@gmail.com</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="contactme-item">
-                        <div class="contactme-frame">
-                            <img src="images/phone.png" />
-                        </div>
-                        <div>
-                            <span class="contactme-item-name">PHONE</span><br />
-                            <div class="d-flex">
-                                <div id="callCountryFrame">
-                                    <img src="images/id-flag.png" id="callCountry" alt="Description" title="Indonesia" />
-                                </div>
-                                <span class="contactme-item-info"><a href="https://wa.me/+6281330251997">(+62) 813-3025-1997</a></span>
+                    @foreach (var item in MyProfile.Contactme.Contacts)
+                    {
+                        <div class="contactme-item">
+                            <div class="contactme-frame">
+                                <img src="@item.IconImg" />
                             </div>
+                            @if (string.IsNullOrEmpty(item.SecondaryImg))
+                            {
+                                <div>
+                                    <span class="contactme-item-name">@item.Header</span><br />
+                                    <span class="contactme-item-info"><a href="@item.Link">@item.LinkName</a></span>
+                                </div>
+                            }
+                            else
+                            {
+                                <div>
+                                    <span class="contactme-item-name">PHONE</span><br />
+                                    <div class="d-flex">
+                                        <div id="secondaryImgFrame">
+                                            <img src="images/id-flag.png" id="secondaryImg" alt="Description" title="@item.SecondaryImgAlt" />
+                                        </div>
+                                        <span class="contactme-item-info"><a href="@item.Link">@item.LinkName</a></span>
+                                    </div>
+                                </div>
+                            }
                         </div>
-                    </div>
+                    }
+
                 </div>
             </div>
         </div>
