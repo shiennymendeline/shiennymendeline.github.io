@@ -14,7 +14,16 @@
     <div>
         @foreach (var tag in payload.Tags)
         {
-            <MudChip Class="carlito-default" T="string" Size="Size.Small">@tag</MudChip>
+            Color mycolor = Color.Default;
+            if (HighlightTags.Contains(tag))
+            {
+                mycolor = Color.Info;
+            }
+            else if (ActiveTags.Contains(tag))
+            {
+                mycolor = Color.Dark;
+            }
+            <MudChip Class="carlito-default" Color="@mycolor" T="string" Size="Size.Small">@tag</MudChip>
         }
     </div>
 </div>

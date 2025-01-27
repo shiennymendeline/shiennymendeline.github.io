@@ -160,26 +160,167 @@
   "project": {
     "title": "Projects",
     "caption": "Here are some of the projects I worked on",
-    "selecAllText": "All",
+    "selectAllText": "All",
+    "nSelectedText": "skill(s) selected",
     "items": [
       {
-        "title": "Langlang Buana",
-        "caption": "A Platform for Travelers to Share Global Travel Insights",
-        "imgPath": "images/projects/project1.jpg",
-        "tags": [ "Laravel", "MySql", "JQuery", "CSS", "HTML", "PHP" ],
+        "title": "My Work Profile",
+        "year": "2025",
+        "caption": "A Detailed Overview of My Professional Background",
+        "imgPath": "images/projects/MWP/cover.png",
+        "tags": [
+          ".NET",
+          "HTML",
+          "CSS",
+          "Mudblazor",
+          "JavaScript",
+          "JQuery",
+          "C#",
+          "Git"
+        ],
         "links": [
           {
             "linkName": "GITHUB",
-            "link": "https://github.com/shiennymendeline"
-          },
+            "link": "https://github.com/shiennymendeline/shiennymendeline.github.io"
+          }
+        ]
+      },
+      {
+        "title": "Langlang Buana",
+        "year": "2018",
+        "caption": "A Platform for Travelers to Share Global Travel Insights",
+        "imgPath": "images/projects/LLB/cover.png",
+        "tags": [
+          "Laravel",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JQuery",
+          "PHP",
+          "MySql"
+        ],
+        "links": [
           {
-            "linkName": "VIDEO",
-            "link": ""
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2018/11/01/langlang-buana/"
+          }
+        ]
+      },
+      {
+        "title": "EASYBID",
+        "year": "2018",
+        "caption": "A Platform for People to Bid Items",
+        "imgPath": "images/projects/EB/cover.png",
+        "tags": [
+          "PaaS",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JQuery",
+          "JAVA",
+          "NoSQL"
+        ],
+        "links": [
+          {
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2018/11/01/easybid/"
+          }
+        ]
+      },
+      {
+        "title": "Factory Management Portal",
+        "year": "2019",
+        "caption": "A Portal for Managing Sugar Cane Factory Orders and Reports",
+        "imgPath": "images/projects/PTBSA/cover.jpg",
+        "tags": [
+          "Laravel",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JQuery",
+          "PHP",
+          "MySql"
+        ],
+        "links": [
+          {
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2019/02/08/website-pt-barokah-sumber-agung/"
+          }
+        ]
+      },
+      {
+        "title": "Lab Assistant Attendance System",
+        "year": "2018",
+        "caption": "A Web App for Lab Assistants to Check In and Generate Attendance Reports",
+        "imgPath": "images/projects/AA/cover.jpg",
+        "tags": [
+          "CodeIgniter",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JQuery",
+          "PHP",
+          "Oracle"
+        ],
+        "links": [
+          {
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2018/11/01/absensi-asisten/"
+          }
+        ]
+      },
+      {
+        "title": "Purchasing Logging System",
+        "year": "2018",
+        "caption": "A Desktop App for Merchant to Log Purchase Records and Generate Report",
+        "imgPath": "images/projects/TM/cover.png",
+        "tags": [
+          "WinForms",
+          "C#",
+          "Oracle"
+        ],
+        "links": [
+          {
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2018/11/01/toko-musik-pembelian/"
+          }
+        ]
+      },
+      {
+        "title": "FourCircle",
+        "year": "2018",
+        "caption": "A Platform for Reviews, Questions, Ratings, and Feedback on Places",
+        "imgPath": "images/projects/FC/cover.png",
+        "tags": [
+          "CodeIgniter",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JQuery",
+          "PHP",
+          "MySQL"
+        ],
+        "links": [
+          {
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2018/11/01/fourcircle/"
           }
         ]
       }
     ],
-    "gotoLink":  "Get in Touch"
+    "infoChipHighlight": {
+      "name": "Blue",
+      "caption": "indicates the skill is included in the selected filter"
+    },
+    "infoChipActive": {
+      "name": "Black",
+      "caption": "indicates the skill is actively used today but not in the selected filter"
+    },
+    "infoChipDefault": {
+      "name": "Black",
+      "caption": "indicates the skill has been less frequently applied in recent times"
+    },
+    "gotoLink": "Get in Touch"
   },
   "contactme": {
     "caption": "Let’s connect if you’re interested in working together.",

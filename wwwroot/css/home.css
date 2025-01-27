@@ -122,7 +122,7 @@
 
 .aboutme-mark {
     position: absolute;
-    top: 105%;
+    top: 103%;
     left: 9.4%;
     transform: translateY(100%);
     width: 14.7%;
@@ -186,7 +186,6 @@
 .projects-title {
     color: var(--brown);
     font-size: 64pt;
-    margin-bottom: 10px;
     text-align: center;
     margin-top: 50px;
 }
@@ -204,15 +203,25 @@
 }
 
 .projects-result {
-    max-height: 74%;
-    overflow-y: scroll;
+    max-height: 66%;
+    width: 95%;
+    margin: auto;
     margin-top: 10px;
+    overflow-y: scroll;
+}
+
+.projects-info {
+    font-family: Carlito, Tahoma;
+    font-size: 9pt;
+    font-style: italic;
+    margin-top: 3%;
+    margin-left: 10px;
 }
 
 /* CONTACTME */
 .contactme-title {
     font-size: 54pt;
-    text-align:center;
+    text-align: center;
     color: var(--oat);
 }
 .contactme-container {
@@ -288,7 +297,7 @@
 /* COMPONENT : IMS (INPUT MULTI SELECT) */
 .my-ims-container {
     min-width: 12%;
-    margin: 10px 20px 0 0;
+    margin: 0px 20px 0 0;
 }
 
     .my-ims-container .mud-input-control {
@@ -325,16 +334,16 @@
     margin: 10px;
 }
 .cardinfo-item-title {
-    font-style : italic;
+    font-style: italic;
     font-size: 16pt;
 }
 .cardinfo-item img {
     width: 400px;
     height: 300px;
-    object-fit: fill;
+    object-fit: cover;
 }
     .cardinfo-item img:hover {
-        cursor: zoom-in;
+        /*cursor: zoom-in;*/
     }
 .cardinfo-buttons {
 

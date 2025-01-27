@@ -44,9 +44,13 @@
     {
         public string Title { get; set; }
         public string Caption { get; set; }
-        public string SelecAllText { get; set; }
+        public string SelectAllText { get; set; }
+        public string NSelectedText { get; set; }
         public List<CardInfoItem> Items { get; set; }
         public string GotoLink { get; set; }
+        public ChipInfo InfoChipHighlight { get; set; }
+        public ChipInfo InfoChipActive { get; set; }
+        public ChipInfo InfoChipDefault { get; set; }
     }
 
     public class Contactme
@@ -86,5 +90,11 @@
         public string Caption { get; set; }
         public string IconImg { get; set; }
         public string CssClass { get; set; }
+    }
+
+    public class ChipInfo
+    {
+        public string Name { get; set; }
+        public string Caption { get; set; }
     }
 }

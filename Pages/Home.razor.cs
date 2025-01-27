@@ -24,7 +24,8 @@ namespace shiennymendeline.github.io.Pages
         private string currentSectionId = "";
         private DotNetObjectReference<Home> _dotNetRef = default!;
 
-        private IEnumerable<string> options { get; set; } = new HashSet<string>();
+        private IEnumerable<string> options { get; set; } = new List<string>();
+        private IEnumerable<string> activeOptions { get; set; } = new List<string>();
 
         protected async override Task OnInitializedAsync()
         {
@@ -64,6 +65,7 @@ namespace shiennymendeline.github.io.Pages
         private void SetupProjects()
         {
             options = MyProfile.Skill.Items.Select(x => x.Name);
+            activeOptions = MyProfile.Skill.Items.Select(x => x.Name);
             SearchProjects(options);
         }
 
@@ -108,15 +110,15 @@ namespace shiennymendeline.github.io.Pages
         {
             options = selectedOptions;
             projects = MyProfile.Project.Items.Where(x => x.Tags.Intersect(options).Any()).ToList();
-            projects.ForEach(x => x.Tags = x.Tags.Intersect(options).ToArray());
+            //projects.ForEach(x => x.Tags = x.Tags.Intersect(options).ToArray());
             StateHasChanged();
         }
         private string GetSelectedProjectSkillText(IEnumerable<string> selectedItems)
         {
             var count = selectedItems.Count();
-            if (count == 0 || count == MyProfile.Skill.Items.Count)
+            if (count == MyProfile.Skill.Items.Count)
             {
-                return MyProfile.Project.SelecAllText;
+                return MyProfile.Project.SelectAllText;
             }
             else if (count == 1)
             {
@@ -124,7 +126,7 @@ namespace shiennymendeline.github.io.Pages
             }
             else
             {
-                return $"{count} skills selected";
+                return $"{count} {MyProfile.Project.NSelectedText}";
             }
 
         }

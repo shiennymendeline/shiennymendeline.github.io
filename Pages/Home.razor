@@ -103,11 +103,10 @@
                 <p>@MyProfile.Project.Caption</p>
                 <img class="projects-doodle" src="images/lines.png" />
             </div>
-            <br />
             <div class="my-ims">
                 <div class="d-flex flex-row-reverse flex-grow-1 gap-4">
                     <div class="my-ims-container">
-                        <MudSelect T="string" MultiSelection="true" SelectAll="true" SelectAllText="@MyProfile.Project.SelecAllText"
+                        <MudSelect T="string" MultiSelection="true" SelectAll="true" SelectAllText="@MyProfile.Project.SelectAllText"
                                    Variant="Variant.Outlined" Margin="Margin.Dense"
                                    MultiSelectionTextFunc="GetSelectedProjectSkillText"
                                    SelectedValues="options"
@@ -126,9 +125,16 @@
                 <div class="d-flex flex-wrap justify-content-center w-100">
                     @foreach (var p in projects)
                     {
-                        <CardInfo payload="@p" />
+                        <CardInfo payload="@p" HighlightTags="options" ActiveTags="activeOptions" />
                     }
                 </div>
+            </div>
+            <div class="projects-info">
+                <MudChip Class="carlito-default" Color="Color.Info" T="string" Size="Size.Small">@MyProfile.Project.InfoChipHighlight.Name</MudChip> @MyProfile.Project.InfoChipHighlight.Caption
+                <br />
+                <MudChip Class="carlito-default" Color="Color.Dark" T="string" Size="Size.Small">@MyProfile.Project.InfoChipActive.Name</MudChip> @MyProfile.Project.InfoChipActive.Caption
+                <br />
+                <MudChip Class="carlito-default" Color="Color.Default" T="string" Size="Size.Small">@MyProfile.Project.InfoChipDefault.Name</MudChip> @MyProfile.Project.InfoChipDefault.Caption
             </div>
         </div>
         <div class="gotolink">

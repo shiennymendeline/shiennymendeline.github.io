@@ -7,5 +7,9 @@ namespace shiennymendeline.github.io.Components
     {
         [Parameter]
         public CardInfoItem payload { get; set; } = new();
+        [Parameter]
+        public IEnumerable<string> HighlightTags { get; set; } = new List<string>();
+        [Parameter]
+        public IEnumerable<string> ActiveTags { get; set; } = new List<string>();
     }
 }

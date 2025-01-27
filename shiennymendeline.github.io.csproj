@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\profiles\" />
-    <Folder Include="wwwroot\images\projects\" />
+    <Folder Include="wwwroot\images\projects\EB\" />
   </ItemGroup>
 
 </Project>
