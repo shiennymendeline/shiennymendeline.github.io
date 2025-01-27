@@ -50,7 +50,7 @@ function InitializeListeners() {
     function handleMouseSection() {
         var sectionId = $(this).attr('id');
         if (currentSectionId != sectionId) {
-            console.log('Mouse is inside the section');
+            //console.log('Mouse is inside the section');
             window.history.replaceState(null, null, "#" + sectionId);
             SetCurrentSectionId(sectionId);
             NavigateToSection(sectionId);
