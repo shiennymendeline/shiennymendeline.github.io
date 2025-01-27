@@ -100,7 +100,7 @@
 .aboutme-title {
     font-style: italic;
     color: var(--brown);
-    font-size: 72pt;
+    font-size: 65pt;
     margin-bottom: 10px;
 }
 
@@ -109,8 +109,8 @@
 }
 
 .aboutme-img img {
-    width: 500px;
-    height: 550px;
+    width: 400px;
+    height: 450px;
     object-fit: contain;
     border-radius: 47% 47% 0 0;
 }
@@ -122,10 +122,10 @@
 
 .aboutme-mark {
     position: absolute;
-    top: 103%;
-    left: 9.4%;
+    top: 107.5%;
+    left: 9.7%;
     transform: translateY(100%);
-    width: 14.7%;
+    width: 13%;
 }
 
 /* SKILLS */
