@@ -5,33 +5,32 @@ using shiennymendeline.github.io.Components;
 using shiennymendeline.github.io.Models;
 using shiennymendeline.github.io.Services;
 using System.Net.Http.Json;
-using static System.Collections.Specialized.BitVector32;
 
 namespace shiennymendeline.github.io.Pages
 {
     public partial class Home : ComponentBase
     {
         [Inject] IJSService JSService { get; set; } = default!;
-        [Inject] NavigationManager _NavigationManager { get; set; } = default!;
+        [Inject] NavigationManager NavigationManager { get; set; } = default!;
         [Inject] HttpClient Http { get; set; } = default!;
         [Inject] ISnackbar Snackbar { get; set; } = default!;
         public MyProfile MyProfile { get; set; } = default!;
         InputGroupButton IgbSearchSkill = new();
         
-        public List<SkillItem> SkillItems = new List<SkillItem>();
-        public List<CardInfoItem> projects = new List<CardInfoItem>();
+        public List<SkillItem> SkillItems = [];
+        public List<CardInfoItem> projects = [];
 
         private string currentSectionId = "";
         private DotNetObjectReference<Home> _dotNetRef = default!;
 
-        private IEnumerable<string> options { get; set; } = new List<string>();
-        private IEnumerable<string> activeOptions { get; set; } = new List<string>();
+        private IEnumerable<string> Options { get; set; } = new List<string>();
+        private IEnumerable<string> ActiveOptions { get; set; } = new List<string>();
 
         protected async override Task OnInitializedAsync()
         {
             try
             {
-                MyProfile = await Http.GetFromJsonAsync<MyProfile>($"data/profileinfo.json?{Guid.NewGuid()}");
+                MyProfile = await Http.GetFromJsonAsync<MyProfile>($"data/profileinfo.json?{Guid.NewGuid()}") ?? default!;
                 if (MyProfile == null)
                 {
                     Snackbar.Add("Failed to load profile data", Severity.Error);
@@ -64,9 +63,9 @@ namespace shiennymendeline.github.io.Pages
 
         private void SetupProjects()
         {
-            options = MyProfile.Skill.Items.Select(x => x.Name);
-            activeOptions = MyProfile.Skill.Items.Select(x => x.Name);
-            SearchProjects(options);
+            Options = MyProfile.Skill.Items.Select(x => x.Name);
+            ActiveOptions = MyProfile.Skill.Items.Select(x => x.Name);
+            SearchProjects(Options);
         }
 
         private void SetupSkillItems()
@@ -108,8 +107,8 @@ namespace shiennymendeline.github.io.Pages
 
         private void SearchProjects(IEnumerable<string> selectedOptions)
         {
-            options = selectedOptions;
-            projects = MyProfile.Project.Items.Where(x => x.Tags.Intersect(options).Any()).ToList();
+            Options = selectedOptions;
+            projects = MyProfile.Project.Items.Where(x => x.Tags.Intersect(Options).Any()).ToList();
             //projects.ForEach(x => x.Tags = x.Tags.Intersect(options).ToArray());
             StateHasChanged();
         }
@@ -133,11 +132,11 @@ namespace shiennymendeline.github.io.Pages
 
         private async Task NavigateToSectionByUrl()
         {
-            var currentUrl = _NavigationManager.Uri.Split('#');
+            var currentUrl = NavigationManager.Uri.Split('#');
             if (currentUrl.Length > 1 && currentSectionId == "")
             {
                 var sectionId = "#" + currentUrl[1];
-                _NavigationManager.NavigateTo(sectionId);
+                NavigationManager.NavigateTo(sectionId);
                 if (_dotNetRef != null)
                 {
                     await JSService.SetCurrentSectionId(sectionId);

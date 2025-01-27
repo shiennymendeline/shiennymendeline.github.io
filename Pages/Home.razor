@@ -1,7 +1,6 @@
 ﻿@page "/"
 @using shiennymendeline.github.io.Models
 @using shiennymendeline.github.io.Components
-@using shiennymendeline.github.io.Utils
 
 
 @if (MyProfile != null)
@@ -109,7 +108,7 @@
                         <MudSelect T="string" MultiSelection="true" SelectAll="true" SelectAllText="@MyProfile.Project.SelectAllText"
                                    Variant="Variant.Outlined" Margin="Margin.Dense"
                                    MultiSelectionTextFunc="GetSelectedProjectSkillText"
-                                   SelectedValues="options"
+                                   SelectedValues="Options"
                                    SelectedValuesChanged="SearchProjects"
                                    AnchorOrigin="Origin.BottomCenter"
                                    AdornmentIcon="@Icons.Material.Filled.FilterAlt">
@@ -125,7 +124,7 @@
                 <div class="d-flex flex-wrap justify-content-center w-100">
                     @foreach (var p in projects)
                     {
-                        <CardInfo payload="@p" HighlightTags="options" ActiveTags="activeOptions" />
+                        <CardInfo payload="@p" HighlightTags="Options" ActiveTags="ActiveOptions" />
                     }
                 </div>
             </div>
