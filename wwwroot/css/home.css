@@ -8,6 +8,7 @@
     height: 400px;
     overflow: hidden;
     position: relative;
+    margin-right: 20px;
 }
 
     .profile-img img {
@@ -21,7 +22,7 @@
     max-width: 840px;
 }
     .profile-info h1 {
-        font-size: 72pt;
+        font-size: 70pt;
         /*position: relative;*/
     }
 
@@ -32,11 +33,11 @@
 
 .profile-mark {
     position: absolute;
-    bottom: 54.7%;
-    left: 73.5%;
-    transform: translateX(-50%);
-    margin-bottom: 10px;
-    width: 21%;
+    top: 23%;
+    left: 62.7%;
+    /*transform: translateX(-50%);*/
+    /*margin-bottom: 10px;*/
+    width: 20%;
 }
 
 
@@ -122,9 +123,9 @@
 .aboutme-mark {
     position: absolute;
     top: 105%;
-    left: 9.8%;
+    left: 9.4%;
     transform: translateY(100%);
-    width: 14.4%;
+    width: 14.7%;
 }
 
 /* SKILLS */
@@ -227,7 +228,7 @@
 .contactme-header img {
     position: absolute;
     width: 15%;
-    top: 455%;
+    top: 453%;
     left: 51.5%;
 }
 
@@ -235,10 +236,10 @@
     border: 1px solid var(--tan);
 }
 .contactme-group {
-    display: flex;
     justify-content: center;
-    width: 100%;
     align-items: center;
+    width: 100%;
+    margin: auto;
 }
 .contactme-frame {
     background-color: var(--oat);
@@ -255,8 +256,10 @@
     display: flex;
     font-family: Carlito, Tahoma;
     font-size: 14pt;
-    width: 48%;
     margin: 1%;
+    border: 2px solid var(--tanOpacity);
+    padding: 11px;
+    border-radius: 10px;
 }
 
     .contactme-item img {

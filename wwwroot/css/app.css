@@ -125,6 +125,7 @@ code {
     --white: white;
     --taupe: #a9948a;
     --tan: #ffc374;
+    --tanOpacity: #ffc3744f;
 }
 
 body {
@@ -176,7 +177,7 @@ body {
 }
 
 .bg-white {
-    background-color: var(--white) !important;
+    background-color: var(--white);
 }
 
 .btn {

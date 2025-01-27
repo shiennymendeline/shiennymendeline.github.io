@@ -1,23 +1,18 @@
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 using MudBlazor;
-using Newtonsoft.Json;
 using shiennymendeline.github.io.Components;
 using shiennymendeline.github.io.Models;
 using shiennymendeline.github.io.Services;
-using shiennymendeline.github.io.Utils;
-using System.Linq;
 using System.Net.Http.Json;
-using System.Text.Json.Serialization;
-using static shiennymendeline.github.io.Pages.Weather;
-using static System.Net.WebRequestMethods;
+using static System.Collections.Specialized.BitVector32;
 
 namespace shiennymendeline.github.io.Pages
 {
     public partial class Home : ComponentBase
     {
         [Inject] IJSService JSService { get; set; } = default!;
+        [Inject] NavigationManager _NavigationManager { get; set; } = default!;
         [Inject] HttpClient Http { get; set; } = default!;
         [Inject] ISnackbar Snackbar { get; set; } = default!;
         public MyProfile MyProfile { get; set; } = default!;
@@ -26,6 +21,8 @@ namespace shiennymendeline.github.io.Pages
         public List<SkillItem> SkillItems = new List<SkillItem>();
         public List<CardInfoItem> projects = new List<CardInfoItem>();
 
+        private string currentSectionId = "";
+        private DotNetObjectReference<Home> _dotNetRef = default!;
 
         private IEnumerable<string> options { get; set; } = new HashSet<string>();
 
@@ -45,13 +42,23 @@ namespace shiennymendeline.github.io.Pages
                     SetupSkillItems();
                     SetupProfileInfo();
                     SetupProjects();
-                    //await JSService.InitializeListeners();
+                    await JSService.InitializeListeners();
                 }
             }
             catch
             {
                 Snackbar.Add("Failed to load profile data", Severity.Error);
             }
+        }
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            if (firstRender)
+            {
+                _dotNetRef = DotNetObjectReference.Create(this);
+                await JSService.SetDotnetReference(_dotNetRef);
+            }
+            await NavigateToSectionByUrl();
         }
 
         private void SetupProjects()
@@ -120,6 +127,26 @@ namespace shiennymendeline.github.io.Pages
                 return $"{count} skills selected";
             }
 
+        }
+
+        private async Task NavigateToSectionByUrl()
+        {
+            var currentUrl = _NavigationManager.Uri.Split('#');
+            if (currentUrl.Length > 1 && currentSectionId == "")
+            {
+                var sectionId = "#" + currentUrl[1];
+                _NavigationManager.NavigateTo(sectionId);
+                if (_dotNetRef != null)
+                {
+                    await JSService.SetCurrentSectionId(sectionId);
+                }
+            }
+        }
+        
+        [JSInvokable]
+        public void NavigateToSectionFromJS(string sectionId)
+        {
+            currentSectionId = sectionId;
         }
     }
 }

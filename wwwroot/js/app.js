@@ -1,5 +1,12 @@
+var currentSectionId = "";
 const timestamp = new Date().getTime();
 const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
+var GLOBAL = {};
+GLOBAL.DotNetReference = null;
+
+function SetDotnetReference(pDotNetReference) {
+    GLOBAL.DotNetReference = pDotNetReference;
+}
 
 stylesheets.forEach(stylesheet => {
     const currentHref = stylesheet.getAttribute('href');
@@ -17,22 +24,36 @@ scripts.forEach(script => {
         : `${currentSrc}?v=${timestamp}`;
     script.setAttribute('src', newSrc);
 });
+window.ScrollToSection = function (sectionId) {
+    var element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    }
+};
+
+function SetCurrentSectionId(sectionId) {
+    currentSectionId = sectionId;
+}
+
+function NavigateToSection(sectionId) {
+    if (GLOBAL.DotNetReference !== null) {
+        GLOBAL.DotNetReference.invokeMethodAsync('NavigateToSectionFromJS', sectionId);
+    } else {
+        console.error('DotNetReference is null. Please set it first.');
+    }
+}
 
 function InitializeListeners() {
-    $('.chip-info-cb').on("change", function () {
-        var parentElement = this.closest('.chip-info')
-        if (this.ariaLabel == "all") {
-            $('.chip-info').removeClass("chip-info-checked")
-            $('.chip-info input[type="checkbox"]:not([aria-label="all"])').prop('checked', false)
+    $('section').on('mousemove', handleMouseSection);
+    $('section').on('mouseenter', handleMouseSection);
+
+    function handleMouseSection() {
+        var sectionId = $(this).attr('id');
+        if (currentSectionId != sectionId) {
+            console.log('Mouse is inside the section');
+            window.history.replaceState(null, null, "#" + sectionId);
+            SetCurrentSectionId(sectionId);
+            NavigateToSection(sectionId);
         }
-        else {
-            $('#chipall').removeClass("chip-info-checked")
-            $('#chipall input[type="checkbox"]').prop('checked', false)
-        }
-        if (this.checked) {
-            $(parentElement).addClass("chip-info-checked")
-        } else {
-            $(parentElement).removeClass("chip-info-checked")
-        }
-    })
+    }
 }

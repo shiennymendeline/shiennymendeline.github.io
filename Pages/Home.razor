@@ -30,7 +30,6 @@
                 </div>
             </div>
         </div>
-
         <div class="gotolink">
             <a href="#aboutme">@MyProfile.Profile.GotoLink</a><br />
             <img src="images/arrow-down.gif" width="32px" />
@@ -79,7 +78,7 @@
                     </MudChip>
                 }
             </MudChipSet>
-            <InputGroupButton @ref="IgbSearchSkill" 
+            <InputGroupButton @ref="IgbSearchSkill"
                               Placeholder="@MyProfile.Skill.PlaceholderSearch"
                               ButtonText="@MyProfile.Skill.TextSearch"
                               OnClickButtonEvent="SetupSkillItems" />
@@ -145,10 +144,13 @@
                     <img src="images/circle-light.png" />
                 </div>
                 <hr />
-                <div class="d-flex contactme-group">
+                @{
+                    var widthItem = 100 / MyProfile.Contactme.Contacts.Count;
+                }
+                <div class="d-flex justify-center contactme-group">
                     @foreach (var item in MyProfile.Contactme.Contacts)
                     {
-                        <div class="contactme-item">
+                        <div class="contactme-item" style="@($"width: {widthItem}%")">
                             <div class="contactme-frame">
                                 <img src="@item.IconImg" />
                             </div>
@@ -162,7 +164,7 @@
                             else
                             {
                                 <div>
-                                    <span class="contactme-item-name">PHONE</span><br />
+                                    <span class="contactme-item-name">@item.Header</span><br />
                                     <div class="d-flex">
                                         <div id="secondaryImgFrame">
                                             <img src="images/id-flag.png" id="secondaryImg" alt="Description" title="@item.SecondaryImgAlt" />
@@ -173,7 +175,6 @@
                             }
                         </div>
                     }
-
                 </div>
             </div>
         </div>

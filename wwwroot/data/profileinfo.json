@@ -177,34 +177,6 @@
             "link": ""
           }
         ]
-      },
-      {
-        "title": "Langlang Buana",
-        "caption": "A Platform for Travelers to Share Global Travel Insights",
-        "imgPath": "images/projects/project1.jpg",
-        "tags": [ "Laravel", "MySql", "JQuery", "CSS", "HTML", "PHP" ],
-        "links": [
-          {
-            "linkName": "GITHUB",
-            "link": "https://github.com/shiennymendeline"
-          }
-        ]
-      },
-      {
-        "title": "Langlang Buana",
-        "caption": "A Platform for Travelers to Share Global Travel Insights",
-        "imgPath": "images/projects/project1.jpg",
-        "tags": [ "Laravel", "MySql", "JQuery", "CSS", "HTML", "PHP" ],
-        "links": [
-          {
-            "linkName": "GITHUB",
-            "link": "https://github.com/shiennymendeline"
-          },
-          {
-            "linkName": "VIDEO",
-            "link": ""
-          }
-        ]
       }
     ],
     "gotoLink":  "Get in Touch"
@@ -223,14 +195,6 @@
         "linkname": "shiennymendeline97@gmail.com",
         "link": "mailto:shiennymendeline97@gmail.com?body=Hello,%20Shienny%20Hadi",
         "iconImg": "images/email.png"
-      },
-      {
-        "header": "WhatsApp",
-        "linkname": "(+62) 813-3025-1997",
-        "link": "https://wa.me/+6281330251997",
-        "iconImg": "images/phone.png",
-        "secondaryImg": "images/id-flag.png",
-        "secondaryImgAlt": "Indonesia"
       }
     ]
   },
