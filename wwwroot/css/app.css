@@ -117,19 +117,98 @@ code {
     /*transform: translateX(-50%);*/ /* Adjust the logo to be perfectly centered */
 /*}*/
 
-.links a {
-    margin: 0 10px 0 10px;
-    color: #996249;
+:root {
+    --brown: #996249;
+    --oat: #f4f1e8;
+    --black: #191919;
+    --darkbrown: #583d30;
+    --white: white;
+    --taupe: #a9948a;
+    --tan: #ffc374;
+    --tanOpacity: #ffc3744f;
 }
 
-.container-info {
-    border: 1px solid black;
+body {
+    color: var(--black);
+    font-family: Carlito, Tahoma;
+}
+.carlito-default {
+    color: var(--black);
+    font-family: Carlito, Tahoma;
+}
+
+/* Regular weight */
+@font-face {
+    font-family: 'Radley';
+    src: url('fonts/Radley/Radley-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Carlito';
+    src: url('fonts/Carlito/Carlito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Italic style */
+@font-face {
+    font-family: 'Radley';
+    src: url('fonts/Radley/Radley-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Bold style */
+@font-face {
+    font-family: 'Carlito';
+    src: url('fonts/Carlito/Carlito-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 
 .bg-oat {
-    background-color: #f4f1e8;
+    background-color: var(--oat);
 }
 
 .bg-brown {
-    background-color: #996249;
+    background-color: var(--brown);
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.btn {
+    padding: 10px;
+    align-items: center;
+    background-color: var(--oat);
+    font-weight: bold;
+    transition: background-color 0.25s;
+    border: 2px solid black;
+    text-decoration: none !important;
+    color: var(--black) !important;
+    margin: 10px;
+}
+
+    .btn:hover {
+        background-color: var(--brown);
+        color: var(--oat);
+    }
+
+    .btn:active {
+        background-color: var(--darkbrown); /* Even darker green on click */
+    }
+
+h1 {
+    font-family: Radley, Tahoma;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
 }

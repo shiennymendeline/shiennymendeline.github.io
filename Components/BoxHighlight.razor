@@ -1,0 +1,19 @@
+﻿<div class="box-info @Class">
+    <img src="images/@IconImg" width="32px" />
+    <br />
+    <span class="box-info-title">@Title</span>
+    <br />
+    @((MarkupString) Caption)
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; }
+    [Parameter] public string Caption { get; set; }
+    [Parameter] public string IconImg { get; set; }
+    [Parameter] public string Class { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Caption = Caption.Replace("\n", "<br />");
+    }
+}

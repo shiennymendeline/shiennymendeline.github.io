@@ -1,0 +1,29 @@
+﻿@using Newtonsoft.Json
+<div class="cardinfo-item">
+    @* todo image bisa di-zoom *@
+    <img src="@payload.ImgPath" />
+    <br />
+    <span class="cardinfo-item-title">@payload.Title</span><br />
+    <span class="cardinfo-item-caption">@payload.Caption</span><br />
+    <div class="d-flex cardinfo-buttons justify-content-center">
+        @foreach (var link in payload.Links)
+        {
+            <a class="w-100" href="@link.Link" target="_blank"><button class="w-100">@link.LinkName</button></a>
+        }
+    </div>
+    <div>
+        @foreach (var tag in payload.Tags)
+        {
+            Color mycolor = Color.Default;
+            if (HighlightTags.Contains(tag))
+            {
+                mycolor = Color.Info;
+            }
+            else if (ActiveTags.Contains(tag))
+            {
+                mycolor = Color.Dark;
+            }
+            <MudChip Class="carlito-default" Color="@mycolor" T="string" Size="Size.Small">@tag</MudChip>
+        }
+    </div>
+</div>

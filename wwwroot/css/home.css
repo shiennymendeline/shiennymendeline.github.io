@@ -1,0 +1,453 @@
+﻿/* PROFILE */
+.container-maxvh {
+    height: 90vh;
+}
+
+.profile-img {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 20px;
+}
+
+    .profile-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+.profile-info {
+    max-width: 840px;
+}
+    .profile-info h1 {
+        font-size: 70pt;
+        /*position: relative;*/
+    }
+
+.profile-highlight {
+    /*position: relative;*/
+    color: var(--brown);
+}
+
+.profile-mark {
+    position: absolute;
+    top: 23%;
+    left: 62.7%;
+    /*transform: translateX(-50%);*/
+    /*margin-bottom: 10px;*/
+    width: 20%;
+}
+
+
+/* Media Queries for Smaller Screens */
+/*@media (max-width: 768px) {
+    h1 {
+        font-size: 8vw;*/ /* Larger font size on smaller screens */
+    /*}
+
+    .profile-highlight {
+        width: 15vw;*/ /* Larger image size on smaller screens */
+        /*bottom: 100%;*/ /* Adjust the vertical position on smaller screens */
+    /*}
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 12vw;*/ /* Larger font size on mobile */
+    /*}
+
+    .profile-highlight {
+        width: 20vw;*/ /* Larger image size on mobile */
+        /*bottom: 80%;*/ /* Adjust the vertical position on mobile */
+    /*}
+}*/
+
+.profile-desc {
+    font-size: 19pt;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+    .profile-desc span {
+        color: var(--brown);
+        font-weight: bold;
+    }
+
+.profile-buttons button {
+    margin: 5px;
+}
+
+.profile-buttons {
+    margin-top: 2vh;
+}
+
+.gotolink {
+    height: 10vh;
+    text-align: center;
+}
+
+    .gotolink a {
+        text-decoration: none;
+        font-family: Radley, Tahoma;
+        font-style: italic;
+        color: var(--brown);
+        font-size: 18pt;
+    }
+
+/* ABOUT ME */
+.aboutme-title {
+    font-style: italic;
+    color: var(--brown);
+    font-size: 65pt;
+    margin-bottom: 10px;
+}
+
+.aboutme-sub-container {
+    width: 80%;
+}
+
+.aboutme-img img {
+    width: 400px;
+    height: 450px;
+    object-fit: contain;
+    border-radius: 47% 47% 0 0;
+}
+
+.aboutme-desc {
+    font-size: 16pt;
+    text-align: center;
+}
+
+.aboutme-mark {
+    position: absolute;
+    top: 107.5%;
+    left: 9.7%;
+    transform: translateY(100%);
+    width: 13%;
+}
+
+/* SKILLS */
+.skills-title {
+    color: var(--brown);
+    font-size: 64pt;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.skills-doodle {
+    width: 18%;
+    position:absolute;
+    top: 212%;
+    left: 46%
+}
+
+.igb-search {
+    width: fit-content;
+    float: right;
+    margin: 10px 20px 0 0;
+}
+
+.igb-searchsubc {
+    width: fit-content;
+}
+
+.skills-results {
+    clear: both;
+    margin-top: 4%;
+    max-height: 66%;
+    overflow-y: scroll;
+}
+
+.skills-item-status {
+    font-size: 14pt;
+}
+
+.igb-searchtxt {
+    background-color: var(--white);
+    width: 10%;
+}
+
+.igb-searchbtn {
+    background-color: var(--brown);
+    color: var(--oat);
+}
+    .igb-searchbtn:hover {
+        background-color: var(--taupe);
+    }
+    .igb-searchbtn:active {
+        background-color: var(--darkbrown);
+    }
+
+
+/* PROJECTS */
+.projects-title {
+    color: var(--brown);
+    font-size: 64pt;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.projects-doodle {
+    width: 5%;
+    position: absolute;
+    top: 327.5%;
+    left: 50%;
+}
+
+.projects-header p {
+    text-align: center;
+    font-size: 18pt;
+}
+
+.projects-result {
+    max-height: 66%;
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
+.projects-info {
+    font-family: Carlito, Tahoma;
+    font-size: 9pt;
+    font-style: italic;
+    margin-top: 3%;
+    margin-left: 10px;
+}
+
+/* CONTACTME */
+.contactme-title {
+    font-size: 54pt;
+    text-align: center;
+    color: var(--oat);
+}
+.contactme-container {
+    height: 100vh;
+    align-items: center;
+}
+.contactme-subcontainer {
+    width: 56%;
+}
+.contactme-header {
+    margin-bottom: 30px;
+}
+.contactme-header img {
+    position: absolute;
+    width: 15%;
+    top: 453%;
+    left: 51.5%;
+}
+
+.contactme-container hr {
+    border: 1px solid var(--tan);
+}
+.contactme-group {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+.contactme-frame {
+    background-color: var(--oat);
+    display: flex;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.contactme-item {
+    color: var(--oat);
+    display: flex;
+    font-family: Carlito, Tahoma;
+    font-size: 14pt;
+    margin: 1%;
+    border: 2px solid var(--tanOpacity);
+    padding: 11px;
+    border-radius: 10px;
+}
+
+    .contactme-item img {
+        height: 30px;
+        object-fit: contain;
+    }
+    .contactme-item a {
+        text-decoration: none;
+        color: var(--oat);
+        font-style: italic;
+    }
+
+#secondaryImgFrame {
+    width: 32px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+#secondaryImg {
+    height:  16px;
+    object-fit: contain;
+}
+
+/* COMPONENT : IMS (INPUT MULTI SELECT) */
+.my-ims-container {
+    min-width: 12%;
+    margin: 0px 20px 0 0;
+}
+
+    .my-ims-container .mud-input-control {
+        background-color: var(--white);
+    }
+
+/* COMPONENT : BOX INFO */
+.box-info {
+    border: 1px solid var(--black);
+    text-align: center;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16pt;
+}
+
+.box-first {
+    margin-left:0;
+}
+
+.box-last {
+    margin-right: 0;
+}
+
+.box-info-title {
+    font-weight: bold;
+}
+
+
+/* COMPONENT : CardInfo */
+.cardinfo-item {
+    font-family: Radley, Tahoma;
+    text-align: center;
+    margin: 10px;
+}
+.cardinfo-item-title {
+    font-style: italic;
+    font-size: 16pt;
+}
+.cardinfo-item img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+    .cardinfo-item img:hover {
+        /*cursor: zoom-in;*/
+    }
+.cardinfo-buttons {
+
+}
+    .cardinfo-buttons a {
+        margin: 5px;
+        padding: 5px;
+        color: var(--black);
+        border: 2px solid var(--black);
+        background-color: var(--oat);
+    }
+
+        .cardinfo-buttons a:hover {
+            background-color: var(--taupe);
+            color: var(--white);
+        }
+
+        .cardinfo-buttons a:active {
+            background-color: var(--darkbrown);
+        }
+
+    .cardinfo-buttons button {
+        font-family: Carlito, Tahoma;
+        font-size: 14pt;
+        font-weight: bold;
+    }
+
+/* COMPONENT : BoxInfoSimple */
+.boxinfosimple-item {
+    margin: 8px;
+    padding: 10px;
+    width: 25%;
+    border: 2px solid #1e1815;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.boxinfosimple-item-name {
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.boxinfosimple-item-status {
+    font-size: 14pt;
+}
+.boxinfosimple-frame {
+    background-color: var(--brown);
+    display: flex;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+    .boxinfosimple-frame img {
+        height: 30px;
+        object-fit: contain;
+    }
+/* COMPONENT : CHIP INFO */
+.chip-info {
+    /*background-color: var(--brown);*/
+    border: 2px solid var(--black);
+    width: fit-content;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px 10px 0 0;
+    padding-right: 15px;
+    font-weight: bold;
+    font-size: 18pt;
+}
+    .chip-info:hover {
+        background-color: var(--taupe) !important;
+        color: var(--white) !important;
+    }
+
+    .chip-info:hover, .chip-info > label:hover {
+        cursor: pointer;
+    }
+
+    .chip-info-checked {
+        background-color: var(--brown);
+        color: var(--white);
+    }
+
+.chip-info-cb {
+    visibility: hidden;
+}
+
+/* UNCATEGORIZED */
+.links a {
+    margin: 0 10px 0 10px;
+    color: #996249;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.footer {
+    text-align: center;
+    color: var(--oat);
+    font-family: Carlito, Tahoma;
+}

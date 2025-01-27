@@ -1,0 +1,343 @@
+{
+  "profile": {
+    "greeting1": "Hello",
+    "greeting2": "I am Shienny",
+    "summary": "As a [Full Stack Developer] with expertise in [C# and .NET], I am a [fast learner] who focuses on creating [clean, reusable code] and building [parameterized solutions] that improve system flexibility and maintainability",
+    "links": [
+      {
+        "linkName": "DOWNLOAD CV",
+        "link": "docs/CV Shienny Hadi.docx"
+      },
+      {
+        "linkName": "CONTACT ME",
+        "link": "#contactme"
+      }
+    ],
+    "profileImg": "profile1.jpg",
+    "gotoLink": "Get to know me"
+  },
+  "aboutme": {
+    "title": "About Me",
+    "aboutmeImg": "profile2.jpg",
+    "highlights": [
+      {
+        "title": "Experience",
+        "caption": "5+ years\nFull Stack Developer",
+        "iconImg": "exp.png",
+        "cssClass": "box-first"
+      },
+      {
+        "title": "Education",
+        "caption": "Bachelor of Informatics Engineering (S.Kom)\nGPA 3.6/4.00\n(Cum Laude)",
+        "iconImg": "edu.png",
+        "cssClass": "box-last"
+      }
+    ],
+    "description": "With over 5 years of experience in software development, including roles as a Software Engineer at PT Bank Mandiri Tbk and a .NET Developer at Freeport Indonesia, I specialize in creating scalable applications using the .NET Framework. I have successfully led projects, contributed to Go-Live applications, and optimized systems with parameterized solutions. Holding a Bachelor's Degree in Informatics Engineering, I am a fast learner, team player, and detail-oriented coder, passionate about developing user-friendly and secure applications that add value to businesses and customers.",
+    "gotoLink": "Discover my skills"
+  },
+  "skill": {
+    "title": "Skills",
+    "placeholderSearch": "Search Skill",
+    "textSearch": "SEARCH",
+    "allInfo": "ALL",
+    "categories": [
+      {
+        "id": "fe",
+        "name": "Front End"
+      },
+      {
+        "id": "be",
+        "name": "Back End"
+      },
+      {
+        "id": "db",
+        "name": "Database"
+      },
+      {
+        "id": "tools",
+        "name": "Tools"
+      },
+      {
+        "id": "ss",
+        "name": "Soft Skill"
+      }
+    ],
+    "items": [
+      {
+        "category": "be",
+        "name": ".NET",
+        "level": "Experienced",
+        "iconImg": "dotnet.png"
+      },
+      {
+        "category": "be",
+        "name": "C#",
+        "level": "Experienced",
+        "iconImg": "csharp.png"
+      },
+      {
+        "category": "be",
+        "name": "ASP .NET",
+        "level": "Experienced",
+        "iconImg": "asp.png"
+      },
+      {
+        "category": "fe",
+        "name": "HTML",
+        "level": "Experienced",
+        "iconImg": "html.png"
+      },
+      {
+        "category": "fe",
+        "name": "CSS",
+        "level": "Intermediate",
+        "iconImg": "css.png"
+      },
+      {
+        "category": "fe",
+        "name": "Mudblazor",
+        "level": "Intermediate",
+        "iconImg": "mudblazor.png"
+      },
+      {
+        "category": "fe",
+        "name": "JavaScript",
+        "level": "Experienced",
+        "iconImg": "js.png"
+      },
+      {
+        "category": "fe",
+        "name": "JQuery",
+        "level": "Experienced",
+        "iconImg": "jquery.png"
+      },
+      {
+        "category": "be",
+        "name": "JAVA",
+        "level": "Intermediate",
+        "iconImg": "java.png"
+      },
+      {
+        "category": "db",
+        "name": "SQL Server",
+        "level": "Experienced",
+        "iconImg": "sqlserver.png"
+      },
+      {
+        "category": "db",
+        "name": "Oracle",
+        "level": "Experienced",
+        "iconImg": "oracle.png"
+      },
+      {
+        "category": "tools",
+        "name": "Git",
+        "level": "Experienced",
+        "iconImg": "git.png"
+      },
+      {
+        "category": "tools",
+        "name": "JIRA",
+        "level": "Experienced",
+        "iconImg": "git.png"
+      },
+      {
+        "category": "ss",
+        "name": "Detail Oriented",
+        "level": "Experienced",
+        "iconImg": "detail-oriented.png"
+      },
+      {
+        "category": "ss",
+        "name": "Fast Learner",
+        "level": "Experienced",
+        "iconImg": "fast-learner.png"
+      }
+    ],
+    "gotoLink": "Check out my projects"
+  },
+  "project": {
+    "title": "Projects",
+    "caption": "Here are some of the projects I worked on",
+    "selectAllText": "All",
+    "nSelectedText": "skill(s) selected",
+    "items": [
+      {
+        "title": "My Work Profile",
+        "year": "2025",
+        "caption": "A Detailed Overview of My Professional Background",
+        "imgPath": "images/projects/MWP/cover.png",
+        "tags": [
+          ".NET",
+          "HTML",
+          "CSS",
+          "Mudblazor",
+          "JavaScript",
+          "JQuery",
+          "C#",
+          "Git"
+        ],
+        "links": [
+          {
+            "linkName": "GITHUB",
+            "link": "https://github.com/shiennymendeline/shiennymendeline.github.io"
+          }
+        ]
+      },
+      {
+        "title": "Langlang Buana",
+        "year": "2018",
+        "caption": "A Platform for Travelers to Share Global Travel Insights",
+        "imgPath": "images/projects/LLB/cover.png",
+        "tags": [
+          "Laravel",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JQuery",
+          "PHP",
+          "MySql"
+        ],
+        "links": [
+          {
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2018/11/01/langlang-buana/"
+          }
+        ]
+      },
+      {
+        "title": "EASYBID",
+        "year": "2018",
+        "caption": "A Platform for People to Bid Items",
+        "imgPath": "images/projects/EB/cover.png",
+        "tags": [
+          "PaaS",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JQuery",
+          "JAVA",
+          "NoSQL"
+        ],
+        "links": [
+          {
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2018/11/01/easybid/"
+          }
+        ]
+      },
+      {
+        "title": "Factory Management Portal",
+        "year": "2019",
+        "caption": "A Portal for Managing Sugar Cane Factory Orders and Reports",
+        "imgPath": "images/projects/PTBSA/cover.jpg",
+        "tags": [
+          "Laravel",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JQuery",
+          "PHP",
+          "MySql"
+        ],
+        "links": [
+          {
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2019/02/08/website-pt-barokah-sumber-agung/"
+          }
+        ]
+      },
+      {
+        "title": "Lab Assistant Attendance System",
+        "year": "2018",
+        "caption": "A Web App for Lab Assistants to Check In and Generate Attendance Reports",
+        "imgPath": "images/projects/AA/cover.jpg",
+        "tags": [
+          "CodeIgniter",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JQuery",
+          "PHP",
+          "Oracle"
+        ],
+        "links": [
+          {
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2018/11/01/absensi-asisten/"
+          }
+        ]
+      },
+      {
+        "title": "Purchasing Logging System",
+        "year": "2018",
+        "caption": "A Desktop App for Merchant to Log Purchase Records and Generate Report",
+        "imgPath": "images/projects/TM/cover.png",
+        "tags": [
+          "WinForms",
+          "C#",
+          "Oracle"
+        ],
+        "links": [
+          {
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2018/11/01/toko-musik-pembelian/"
+          }
+        ]
+      },
+      {
+        "title": "FourCircle",
+        "year": "2018",
+        "caption": "A Platform for Reviews, Questions, Ratings, and Feedback on Places",
+        "imgPath": "images/projects/FC/cover.png",
+        "tags": [
+          "CodeIgniter",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JQuery",
+          "PHP",
+          "MySQL"
+        ],
+        "links": [
+          {
+            "linkName": "MORE INFO",
+            "link": "https://shiennymendeline.wordpress.com/2018/11/01/fourcircle/"
+          }
+        ]
+      }
+    ],
+    "infoChipHighlight": {
+      "name": "Blue",
+      "caption": "indicates the skill is included in the selected filter"
+    },
+    "infoChipActive": {
+      "name": "Black",
+      "caption": "indicates the skill is actively used today but not in the selected filter"
+    },
+    "infoChipDefault": {
+      "name": "Black",
+      "caption": "indicates the skill has been less frequently applied in recent times"
+    },
+    "gotoLink": "Get in Touch"
+  },
+  "contactme": {
+    "caption": "Let’s connect if you’re interested in working together.",
+    "contacts": [
+      {
+        "header": "LINKEDIN",
+        "linkname": "Shienny Hadi",
+        "link": "https://www.linkedin.com/in/shiennyhadi/",
+        "iconImg": "images/linkedin.png"
+      },
+      {
+        "header": "EMAIL",
+        "linkname": "shiennymendeline97@gmail.com",
+        "link": "mailto:shiennymendeline97@gmail.com?body=Hello,%20Shienny%20Hadi",
+        "iconImg": "images/email.png"
+      }
+    ]
+  },
+  "footer": "Copyright © 2025 Shienny Hadi. All Rights Reserved."
+}
