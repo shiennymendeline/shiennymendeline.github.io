@@ -1,0 +1,55 @@
+﻿
+/* SKILLS */
+.skills-title {
+    color: var(--brown);
+    font-size: 64pt;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.skills-doodle {
+    width: 18%;
+    position: absolute;
+    top: 212%;
+    left: 46%
+}
+
+.igb-search {
+    width: fit-content;
+    float: right;
+    margin: 10px 20px 0 0;
+}
+
+.igb-searchsubc {
+    width: fit-content;
+}
+
+.skills-results {
+    clear: both;
+    margin-top: 4%;
+    max-height: 66%;
+    overflow-y: scroll;
+}
+
+.skills-item-status {
+    font-size: 14pt;
+}
+
+.igb-searchtxt {
+    background-color: var(--white);
+    width: 10%;
+}
+
+.igb-searchbtn {
+    background-color: var(--brown);
+    color: var(--oat);
+}
+
+    .igb-searchbtn:hover {
+        background-color: var(--taupe);
+    }
+
+    .igb-searchbtn:active {
+        background-color: var(--darkbrown);
+    }

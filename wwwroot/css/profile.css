@@ -1,0 +1,100 @@
+﻿.profile-img {
+    /*width: 400px;
+    height: 400px;*/
+    overflow: hidden;
+    position: relative;
+    margin-right: 20px;
+}
+
+    .profile-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+.profile-info {
+    /*max-width: 840px;*/
+}
+    .profile-info h1 {
+        /*font-size: 70pt;*/
+        /*position: relative;*/
+    }
+
+.profile-highlight {
+    color: var(--brown);
+}
+
+.profile-desc {
+    /*font-size: 19pt;*/
+    text-align: center;
+}
+
+    .profile-desc span {
+        color: var(--brown);
+        font-weight: bold;
+    }
+
+.profile-mark {
+    position: absolute;
+    /*width: 20%;*/
+    /*top: 23%;
+    left: 62.7%;*/
+}
+
+.profile-buttons button {
+    /*margin: 500px;*/
+}
+
+.profile-buttons {
+    margin-top: 2vh;
+}
+
+/******************* RESPONSIVE DONE 1025 ke atas ********************************/
+
+/* Default mobile-first layout */
+
+
+/* Mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+    
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+
+/* Small screens and laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+/* Laptop L */
+/*@media (min-width: 1025px) and (max-width: 1440px) */
+/* Extra large screens */
+/*@media (min-width: 1441px) {*/
+@media (min-width: 1025px) {
+    .profile-img {
+        width: 21%;
+    }
+
+    .profile-info {
+        max-width: 44%;
+    }
+
+        .profile-info h1 {
+            font-size: 4.9vw;
+        }
+
+    .profile-desc {
+        font-size: 1.3vw;
+        margin-top: 5vh;
+    }
+
+    .profile-mark {
+        width: 20%;
+        top: 23%;
+        left: 63%;
+    }
+}
