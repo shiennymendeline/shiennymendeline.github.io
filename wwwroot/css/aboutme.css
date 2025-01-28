@@ -47,9 +47,8 @@
 
     .aboutme-img img {
         width: 200px;
-        height: 250px;
+        height: 225px;
         margin-top: 10%;
-        /*margin-left: 10px;*/
     }
 
     .aboutme-desc {
@@ -58,9 +57,20 @@
     }
 
     .aboutme-mark {
-        top: 100%;
         left: 9%;
         width: 27%;
+    }
+}
+
+@media (max-width: 407px) {
+    .aboutme-mark {
+        top: 99%;
+    }
+}
+
+@media (min-width: 408px) and (max-width: 480px) {
+    .aboutme-mark {
+        top: 101%;
     }
 }
 
