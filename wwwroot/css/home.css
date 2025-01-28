@@ -16,6 +16,16 @@
         font-size: 1.2vw;
     }
 
+@media (max-width: 480px) {
+    .gotolink {
+        height: 5vh;
+    }
+
+        .gotolink a {
+            font-size: 5vw;
+        }
+}
+
 /* COMPONENT : IMS (INPUT MULTI SELECT) */
 .my-ims-container {
     min-width: 12%;

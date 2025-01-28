@@ -131,6 +131,7 @@ code {
 body {
     color: var(--black);
     font-family: Carlito, Tahoma;
+    min-width: 390px; /* mobile resolution minimum */
 }
 .carlito-default {
     color: var(--black);
