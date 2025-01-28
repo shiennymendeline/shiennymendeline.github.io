@@ -16,14 +16,16 @@
         font-size: 1.2vw;
     }
 
-@media (max-width: 480px) {
-    .gotolink {
-        height: 5vh;
-    }
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
 
-        .gotolink a {
-            font-size: 5vw;
-        }
+.footer {
+    text-align: center;
+    color: var(--oat);
+    font-family: Carlito, Tahoma;
 }
 
 /* COMPONENT : IMS (INPUT MULTI SELECT) */
@@ -41,9 +43,9 @@
     border: 1px solid var(--black);
     text-align: center;
     width: 50%;
-    margin: 10px;
-    padding: 10px;
-    font-size: 16pt;
+    margin: 1%;
+    padding: 1%;
+    font-size: 2vh;
 }
 
 .box-first {
@@ -57,7 +59,6 @@
 .box-info-title {
     font-weight: bold;
 }
-
 
 /* COMPONENT : CardInfo */
 .cardinfo-item {
@@ -166,15 +167,41 @@
     visibility: hidden;
 }
 
-/* UNCATEGORIZED */
-#backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+/* Mobile devices */
+@media (max-width: 480px) {
+    .container-maxvh {
+        height: 90vh;
+    }
+
+    .gotolink {
+        height: 5vh;
+    }
+
+        .gotolink a {
+            font-size: 5vw;
+        }
+
+    .box-info {
+        width: 100%;
+        font-size: 1vh;
+        margin: 0 0 5px 0;
+        padding: 5px;
+        align-items: center;
+    }
+
+    .box-info img {
+        width: 20px;
+    }
 }
 
-.footer {
-    text-align: center;
-    color: var(--oat);
-    font-family: Carlito, Tahoma;
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+/* Small screens and laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Laptop L and extra large screen */
+@media (min-width: 1025px) {
 }
