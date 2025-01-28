@@ -16,7 +16,24 @@
         font-size: 1.2vw;
     }
 
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.footer {
+    text-align: center;
+    color: var(--oat);
+    font-family: Carlito, Tahoma;
+}
+
+/* Mobile devices */
 @media (max-width: 480px) {
+    .container-maxvh {
+        height: 90vh;
+    }
+
     .gotolink {
         height: 5vh;
     }
@@ -41,9 +58,9 @@
     border: 1px solid var(--black);
     text-align: center;
     width: 50%;
-    margin: 10px;
-    padding: 10px;
-    font-size: 16pt;
+    margin: 1%;
+    padding: 1%;
+    font-size: 2vh;
 }
 
 .box-first {
@@ -58,6 +75,20 @@
     font-weight: bold;
 }
 
+/* Mobile devices */
+@media (max-width: 480px) {
+    .box-info {
+        width: 100%;
+        font-size: 1vh;
+        margin: 0 0 5px 0;
+        padding: 5px;
+        align-items: center;
+    }
+
+        .box-info img {
+            width: 20px;
+        }
+}
 
 /* COMPONENT : CardInfo */
 .cardinfo-item {
@@ -135,22 +166,90 @@
         height: 30px;
         object-fit: contain;
     }
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .boxinfosimple-item {
+        margin: 1%;
+        width: 25%;
+        border: 2px solid #1e1815;
+        background-color: white;
+    }
+
+    .boxinfosimple-item-name {
+        font-weight: bold;
+        font-size: 2.5vh;
+    }
+
+    .boxinfosimple-item-status {
+        font-size: 2vh;
+    }
+
+    .boxinfosimple-item {
+        padding: 5px;
+        margin: 5px;
+        width: 20%;
+    }
+
+    .boxinfosimple-frame {
+        background-color: var(--brown);
+        display: flex;
+        height: 30px;
+        width: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .boxinfosimple-frame img {
+            height: 20px;
+            object-fit: contain;
+        }
+}
+    
+/* Small screens and laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .boxinfosimple-item {
+        margin: 1%;
+        width: 25%;
+        border: 2px solid #1e1815;
+        background-color: white;
+    }
+
+    .boxinfosimple-item-name {
+        font-weight: bold;
+        font-size: 2.5vh;
+    }
+
+    .boxinfosimple-item-status {
+        font-size: 2vh;
+    }
+
+    .boxinfosimple-frame {
+        background-color: var(--brown);
+        display: flex;
+        height: 50px;
+        width: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .boxinfosimple-frame img {
+            height: 30px;
+            object-fit: contain;
+        }
+}
+
 /* COMPONENT : CHIP INFO */
 .chip-info {
-    /*background-color: var(--brown);*/
     border: 2px solid var(--black);
     width: fit-content;
     min-width: 100px;
-    text-align: center;
-    border-radius: 20px;
     margin: 20px 10px 0 0;
     padding-right: 15px;
-    font-weight: bold;
-    font-size: 18pt;
 }
     .chip-info:hover {
-        background-color: var(--taupe) !important;
-        color: var(--white) !important;
+        background-color: var(--taupe);
+        color: var(--white);
     }
 
     .chip-info:hover, .chip-info > label:hover {
@@ -162,19 +261,67 @@
         color: var(--white);
     }
 
-.chip-info-cb {
-    visibility: hidden;
+/* Small screens and laptops */
+@media (max-width: 1024px) {
+    .chip-info {
+        border: 2px solid var(--black);
+        width: fit-content;
+        min-width: 100px;
+        margin: 0 10px 0 0;
+        padding-right: 15px;
+        padding-top: 2px;
+    }
 }
 
-/* UNCATEGORIZED */
-#backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+/* COMPONENT : INPUT GROUP BUTTON */
+
+.igb-search {
+    width: fit-content;
+    float: right;
+    margin: 10px 20px 0 0;
 }
 
-.footer {
-    text-align: center;
+.igb-searchsubc {
+    width: fit-content;
+}
+
+.igb-searchtxt {
+    background-color: var(--white);
+}
+
+.igb-searchbtn {
+    background-color: var(--brown);
     color: var(--oat);
-    font-family: Carlito, Tahoma;
+}
+
+    .igb-searchbtn:hover {
+        background-color: var(--taupe);
+    }
+
+    .igb-searchbtn:active {
+        background-color: var(--darkbrown);
+    }
+
+@media (max-width: 1024px) {
+    .igb-searchbtn p {
+        font-size: 2.3vh;
+    }
+}
+
+/* TEMPLATE MEDIA QUERY */
+/* Mobile devices */
+@media (max-width: 480px) {
+
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+/* Small screens and laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Laptop L and extra large screen */
+@media (min-width: 1025px) {
 }
