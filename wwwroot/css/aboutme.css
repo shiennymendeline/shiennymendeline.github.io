@@ -1,0 +1,32 @@
+﻿
+/* ABOUT ME */
+.aboutme-title {
+    font-style: italic;
+    color: var(--brown);
+    font-size: 65pt;
+    margin-bottom: 10px;
+}
+
+.aboutme-sub-container {
+    width: 80%;
+}
+
+.aboutme-img img {
+    width: 400px;
+    height: 450px;
+    object-fit: contain;
+    border-radius: 47% 47% 0 0;
+}
+
+.aboutme-desc {
+    font-size: 16pt;
+    text-align: center;
+}
+
+.aboutme-mark {
+    position: absolute;
+    top: 107.5%;
+    left: 9.7%;
+    transform: translateY(100%);
+    width: 13%;
+}
