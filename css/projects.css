@@ -1,0 +1,37 @@
+﻿
+
+/* PROJECTS */
+.projects-title {
+    color: var(--brown);
+    font-size: 64pt;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.projects-doodle {
+    width: 5%;
+    position: absolute;
+    top: 327.5%;
+    left: 50%;
+}
+
+.projects-header p {
+    text-align: center;
+    font-size: 18pt;
+}
+
+.projects-result {
+    max-height: 66%;
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
+.projects-info {
+    font-family: Carlito, Tahoma;
+    font-size: 9pt;
+    font-style: italic;
+    margin-top: 3%;
+    margin-left: 10px;
+}
