@@ -85,6 +85,7 @@
 
         .profile-info h1 {
             font-size: 4.9vw;
+            text-align: center;
         }
 
     .profile-desc {
@@ -94,7 +95,7 @@
 
     .profile-mark {
         width: 20%;
-        top: 23%;
-        left: 63%;
+        top: 23.6%;
+        left: 63.5%;
     }
 }
