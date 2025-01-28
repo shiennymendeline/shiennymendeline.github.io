@@ -2,54 +2,138 @@
 /* SKILLS */
 .skills-title {
     color: var(--brown);
-    font-size: 64pt;
-    margin-bottom: 10px;
     text-align: center;
-    margin-top: 50px;
 }
 
 .skills-doodle {
-    width: 18%;
     position: absolute;
-    top: 212%;
-    left: 46%
-}
-
-.igb-search {
-    width: fit-content;
-    float: right;
-    margin: 10px 20px 0 0;
-}
-
-.igb-searchsubc {
-    width: fit-content;
 }
 
 .skills-results {
     clear: both;
     margin-top: 4%;
-    max-height: 66%;
     overflow-y: scroll;
 }
 
-.skills-item-status {
-    font-size: 14pt;
+.skills-chips {
+    margin-top: 2%;
 }
-
-.igb-searchtxt {
-    background-color: var(--white);
-    width: 10%;
-}
-
-.igb-searchbtn {
-    background-color: var(--brown);
-    color: var(--oat);
-}
-
-    .igb-searchbtn:hover {
-        background-color: var(--taupe);
+/* Mobile devices */
+@media (max-width: 480px) {
+    .skills-title {
+        margin-top: 20px;
+        font-size: 5vh;
     }
 
-    .igb-searchbtn:active {
-        background-color: var(--darkbrown);
+    .skills-doodle {
+        width: 30%;
+        top: 197%;
+        left: 43%
     }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .skills-title {
+        font-size: 10vh;
+    }
+
+    .skills-doodle {
+        width: 18%;
+        top: 210%;
+        left: 46%
+    }
+
+    #skills .mud-chip {
+        height: 20px !important;
+        padding: 10px 15px 10px 10px;
+    }
+
+    #skills .mud-icon-root {
+        height: 0.7em !important;
+    }
+
+    #skills .mud-chip p {
+        font-size: 2.2vh !important;
+    }
+
+    #skills input[inputmode=text] {
+        font-size: 2.2vh !important;
+        padding: 10px 3px 10px 6px;
+    }
+
+    .skills-results {
+        max-height: 59%;
+    }
+}
+
+/* Small screens and laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .skills-title {
+        font-size: 12vh;
+    }
+
+    .skills-doodle {
+        width: 18%;
+        top: 211%;
+        left: 46%
+    }
+
+    #skills input[inputmode=text] {
+        font-size: 100% !important;
+        padding: 10px 3px 10px 6px;
+    }
+
+    .skills-results {
+        max-height: 59%;
+    }
+
+    #skills .mud-chip {
+        height: 20px !important;
+        padding: 10px 15px 10px 10px;
+    }
+
+    #skills .mud-icon-root {
+        height: 0.7em !important;
+    }
+
+    #skills .mud-chip p {
+        font-size: 2vh !important;
+    }
+}
+
+/* Laptop L and extra large screen */
+@media (min-width: 1025px) {
+    .skills-title {
+        font-size: 10vh;
+    }
+
+    .skills-doodle {
+        width: 18%;
+        top: 212%;
+        left: 46%
+    }
+}
+
+@media (min-width: 1440px) {
+    .skills-doodle {
+        top: 208%;
+    }
+
+    .skills-results {
+        margin-top: 4%;
+        max-height: 59%;
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .skills-doodle {
+        top: 207%;
+    }
+
+    .skills-results {
+        margin-top: 4%;
+        max-height: 66%;
+    }
+}

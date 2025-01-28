@@ -32,11 +32,6 @@
     margin-top: 2vh;
 }
 
-/******************* RESPONSIVE DONE 1025 ke atas ********************************/
-
-/* Default mobile-first layout */
-
-
 /* Mobile devices */
 @media (max-width: 480px) {
     .profile-sub-container {
@@ -63,9 +58,9 @@
     }
 
     .profile-mark {
-        width: 32%;
+        width: 33%;
         top: 46.5%;
-        left: 55%;
+        left: 53%;
     }
 }
 
@@ -123,10 +118,7 @@
     }
 }
 
-/* Laptop L */
-/*@media (min-width: 1025px) and (max-width: 1440px) */
-/* Extra large screens */
-/*@media (min-width: 1441px) {*/
+/* Laptop L and extra large screen */
 @media (min-width: 1025px) {
     .profile-img {
         width: 21%;
