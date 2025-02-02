@@ -32,6 +32,24 @@
     margin-top: 2vh;
 }
 
+.profile-header {
+    position: relative;
+}
+
+    .profile-header img {
+        position: absolute;
+        width: 33%;
+        transform: translateY(-50%);
+        top: 39%;
+        left: 39%;
+        z-index: 1;
+    }
+
+    .profile-header h1 {
+        font-size: 3.6vw;
+        z-index: 0;
+    }
+
 /* Mobile devices */
 @media (max-width: 480px) {
     .profile-sub-container {
@@ -46,22 +64,22 @@
         max-width: 90%;
     }
 
-        .profile-info h1 {
+        /*.profile-info h1 {
             font-size: 8vw;
             text-align: center;
             margin-top: 2vh;
-        }
+        }*/
 
     .profile-desc {
         font-size: 3vw;
         margin-top: 2vh;
     }
 
-    .profile-mark {
+    /*.profile-mark {
         width: 33%;
         top: 46.5%;
         left: 53%;
-    }
+    }*/
 }
 
 /* Tablets */
@@ -74,21 +92,21 @@
         max-width: 44%;
     }
 
-        .profile-info h1 {
+        /*.profile-info h1 {
             font-size: 4.9vw;
             text-align: center;
-        }
+        }*/
 
     .profile-desc {
         font-size: 1.3vw;
         margin-top: 5vh;
     }
 
-    .profile-mark {
+    /*.profile-mark {
         width: 20%;
         top: 24.5%;
         left: 64.5%;
-    }
+    }*/
 }
 
 /* Small screens and laptops */
@@ -101,21 +119,21 @@
         max-width: 44%;
     }
 
-        .profile-info h1 {
+        /*.profile-info h1 {
             font-size: 4.9vw;
             text-align: center;
-        }
+        }*/
 
     .profile-desc {
         font-size: 1.3vw;
         margin-top: 5vh;
     }
 
-    .profile-mark {
+    /*.profile-mark {
         width: 20%;
         top: 24.5%;
         left: 64%;
-    }
+    }*/
 }
 
 /* Laptop L and extra large screen */
@@ -128,19 +146,19 @@
         max-width: 44%;
     }
 
-        .profile-info h1 {
+        /*.profile-info h1 {
             font-size: 4.9vw;
             text-align: center;
-        }
+        }*/
 
     .profile-desc {
         font-size: 1.3vw;
         margin-top: 5vh;
     }
 
-    .profile-mark {
+    /*.profile-mark {
         width: 20%;
         top: 23.6%;
         left: 63.5%;
-    }
+    }*/
 }

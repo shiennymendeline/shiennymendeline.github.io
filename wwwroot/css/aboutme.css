@@ -1,10 +1,10 @@
 ﻿
-.aboutme-title {
+/*.aboutme-title {
     font-style: italic;
-    color: var(--brown);
+    color: var(--brown);*/
     /*font-size: 65pt;
     margin-bottom: 10px;*/
-}
+/*}*/
 
 .aboutme-sub-container {
     width: 80%;
@@ -22,13 +22,32 @@
     text-align: justify;
 }
 
-.aboutme-mark {
+/*.aboutme-mark {
     position: absolute;
-    transform: translateY(100%);
+    transform: translateY(100%);*/
     /*top: 107.5%;
     left: 9.7%;
     width: 13%;*/
+/*}*/
+
+.aboutme-header {
+    position: relative;
 }
+
+    .aboutme-header img {
+        position: absolute;
+        width: 18%;
+        top: 0%;
+        left: 0%;
+        z-index: 1;
+    }
+
+    .aboutme-header h1 {
+        font-style: italic;
+        color: var(--brown);
+        font-size: 3.6vw;
+        z-index: 0;
+    }
 
 /* Mobile devices */
 @media (max-width: 480px) {
@@ -36,10 +55,10 @@
         flex-wrap: wrap;
     }
 
-    .aboutme-title {
+    /*.aboutme-title {
         font-size: 10vw;
         margin-bottom: 1vh;
-    }
+    }*/
 
     .aboutme-highlight {
         flex-wrap: wrap;
@@ -56,30 +75,30 @@
         margin-top: 10px;
     }
 
-    .aboutme-mark {
+    /*.aboutme-mark {
         left: 9%;
         width: 27%;
-    }
+    }*/
 }
 
 @media (max-width: 407px) {
-    .aboutme-mark {
+    /*.aboutme-mark {
         top: 99%;
-    }
+    }*/
 }
 
 @media (min-width: 408px) and (max-width: 480px) {
-    .aboutme-mark {
+    /*.aboutme-mark {
         top: 101%;
-    }
+    }*/
 }
 
 /* Tablets */
 @media (min-width: 481px) and (max-width: 768px) {
-    .aboutme-title {
+    /*.aboutme-title {
         font-size: 5vw;
         margin-bottom: 1vh;
-    }
+    }*/
 
     .aboutme-img img {
         width: 200px;
@@ -91,19 +110,19 @@
         font-size: 2vh;
     }
 
-    .aboutme-mark {
+    /*.aboutme-mark {
         top: 109%;
         left: 9%;
         width: 14%;
-    }
+    }*/
 }
 
 /* Small screens and laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .aboutme-title {
+    /*.aboutme-title {
         font-size: 5vw;
         margin-bottom: 1vh;
-    }
+    }*/
 
     .aboutme-img img {
         width: 300px;
@@ -114,19 +133,19 @@
         font-size: 2vh;
     }
 
-    .aboutme-mark {
+    /*.aboutme-mark {
         top: 109%;
         left: 9%;
         width: 14%;
-    }
+    }*/
 }
 
 /* Laptop L and extra large screen */
 @media (min-width: 1025px) {
-    .aboutme-title {
+    /*.aboutme-title {
         font-size: 5vw;
         margin-bottom: 1vh;
-    }
+    }*/
 
     .aboutme-img img {
         width: 400px;
@@ -137,22 +156,9 @@
         font-size: 2.2vh;
     }
 
-    .aboutme-mark {
+    /*.aboutme-mark {
         top: 104%;
         left: 9%;
         width: 14%;
-    }
-}
-
-@media (min-width: 1440px) {
-    .aboutme-mark {
-        top: 108%;
-    }
-}
-
-
-@media (min-width: 1920px) {
-    .aboutme-mark {
-        top: 107%;
-    }
+    }*/
 }
