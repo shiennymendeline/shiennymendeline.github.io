@@ -17,6 +17,7 @@
 
 .profile-desc {
     text-align: center;
+    margin-top: 3vh;
 }
 
     .profile-desc span {
@@ -37,13 +38,14 @@
         width: 33%;
         transform: translateY(-50%);
         top: 39%;
-        left: 39%;
+        left: 54%;
         z-index: 1;
     }
 
     .profile-header h1 {
         font-size: 3.6vw;
         z-index: 0;
+        text-align: center;
     }
 
 /* Mobile devices */
@@ -125,6 +127,5 @@
 
     .profile-desc {
         font-size: 1.3vw;
-        margin-top: 5vh;
     }
 }

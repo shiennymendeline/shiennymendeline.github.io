@@ -174,6 +174,40 @@
 
 }
 
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .cardinfo-item {
+        width: 45%;
+        margin: 1%;
+        height: 100%;
+    }
+
+        .cardinfo-item img {
+            height: 100px;
+        }
+
+    .cardinfo-item-title {
+        font-size: 3vh;
+    }
+
+    .cardinfo-item-caption {
+        font-size: 2vh;
+    }
+
+    .cardinfo-buttons a {
+        padding: 0;
+    }
+
+    .cardinfo-tagc {
+        margin-top: 2px;
+    }
+
+        .cardinfo-tagc .mud-chip-content {
+            font-size: 1vw;
+            margin: 0;
+        }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .cardinfo-item {
         width: 25%;
