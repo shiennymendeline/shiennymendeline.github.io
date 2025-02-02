@@ -24,10 +24,6 @@
         font-weight: bold;
     }
 
-.profile-mark {
-    position: absolute;
-}
-
 .profile-buttons {
     margin-top: 2vh;
 }
@@ -63,23 +59,25 @@
     .profile-info {
         max-width: 90%;
     }
+        
+        .profile-header img {
+            width: 35%;
+            top: 40%;
+            left: 54.5%;
+            z-index: 1;
+        }
 
-        /*.profile-info h1 {
+        .profile-info h1 {
             font-size: 8vw;
             text-align: center;
             margin-top: 2vh;
-        }*/
+        }
 
     .profile-desc {
         font-size: 3vw;
         margin-top: 2vh;
     }
 
-    /*.profile-mark {
-        width: 33%;
-        top: 46.5%;
-        left: 53%;
-    }*/
 }
 
 /* Tablets */
@@ -92,21 +90,10 @@
         max-width: 44%;
     }
 
-        /*.profile-info h1 {
-            font-size: 4.9vw;
-            text-align: center;
-        }*/
-
     .profile-desc {
         font-size: 1.3vw;
         margin-top: 5vh;
     }
-
-    /*.profile-mark {
-        width: 20%;
-        top: 24.5%;
-        left: 64.5%;
-    }*/
 }
 
 /* Small screens and laptops */
@@ -119,21 +106,11 @@
         max-width: 44%;
     }
 
-        /*.profile-info h1 {
-            font-size: 4.9vw;
-            text-align: center;
-        }*/
-
     .profile-desc {
         font-size: 1.3vw;
         margin-top: 5vh;
     }
 
-    /*.profile-mark {
-        width: 20%;
-        top: 24.5%;
-        left: 64%;
-    }*/
 }
 
 /* Laptop L and extra large screen */
@@ -146,19 +123,8 @@
         max-width: 44%;
     }
 
-        /*.profile-info h1 {
-            font-size: 4.9vw;
-            text-align: center;
-        }*/
-
     .profile-desc {
         font-size: 1.3vw;
         margin-top: 5vh;
     }
-
-    /*.profile-mark {
-        width: 20%;
-        top: 23.6%;
-        left: 63.5%;
-    }*/
 }

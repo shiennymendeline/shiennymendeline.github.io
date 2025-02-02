@@ -43,6 +43,22 @@
 
 /* Mobile devices */
 @media (max-width: 480px) {
+    .projects-title {
+        font-size: 15vw;
+    }
+
+    .projects-doodle {
+        width: 13vw;
+        left: 52%;
+    }
+
+    .projects-st-container p {
+        font-size: 4vw;
+    }
+
+    .projects-info {
+        font-size: 2.7vw;
+    }
 }
 
 /* Tablets */

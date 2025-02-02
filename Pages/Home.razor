@@ -86,7 +86,7 @@
                               ButtonText="@MyProfile.Skill.TextSearch"
                               OnClickButtonEvent="SetupSkillItems" />
             <div class="skills-results">
-                <div class="d-flex flex-wrap justify-content-center w-100">
+                <div class="d-flex flex-wrap justify-content-center">
                     @foreach (var s in SkillItems)
                     {
                         <BoxInfoSimple Name="@s.Name" Caption="@s.Level" ImgPath="@($"images/icon/{s.IconImg}")" />
