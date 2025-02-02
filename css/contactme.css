@@ -1,29 +1,37 @@
 ﻿
 /* CONTACTME */
 .contactme-title {
-    font-size: 54pt;
+    font-size: 3.7vw;
     text-align: center;
     color: var(--oat);
 }
 
 .contactme-container {
-    height: 100vh;
+    height: 97.2vh;
     align-items: center;
 }
 
 .contactme-subcontainer {
-    width: 56%;
+    width: 60%;
 }
 
 .contactme-header {
-    margin-bottom: 30px;
+    margin-bottom: 5%;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3%;
 }
 
     .contactme-header img {
         position: absolute;
-        width: 15%;
-        top: 453%;
-        left: 51.5%;
+        width: 26%;
+        top: 45%;
+        left: 53%;
+    }
+
+    .contactme-header h1 {
+        font-size: 3.6vw;    
     }
 
 .contactme-container hr {
@@ -52,10 +60,10 @@
     color: var(--oat);
     display: flex;
     font-family: Carlito, Tahoma;
-    font-size: 14pt;
+    font-size: 1vw;
     margin: 1%;
     border: 2px solid var(--tanOpacity);
-    padding: 11px;
+    padding: 1%;
     border-radius: 10px;
 }
 
@@ -75,13 +83,25 @@
     height: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 10px;
+    padding-top: 2%;
 }
 
 #secondaryImg {
     height: 16px;
     object-fit: contain;
+}
+
+.footer {
+    text-align: center;
+    color: var(--oat);
+    font-family: Carlito, Tahoma;
+    font-size: 1vw;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 
 /* Mobile devices */
@@ -94,6 +114,17 @@
 
 /* Small screens and laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .contactme-frame {
+        height: 30px;
+        width: 30px;
+        margin-right: 5px;
+    }
+    .contactme-item img {
+        height: 20px;
+    }
+    #secondaryImg {
+        height: 10px;
+    }
 }
 
 /* Laptop L and extra large screen */
