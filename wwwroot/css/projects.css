@@ -3,37 +3,42 @@
 /* PROJECTS */
 .projects-title {
     color: var(--brown);
-    font-size: 64pt;
+    font-size: 5vw;
     text-align: center;
-    margin-top: 50px;
+}
+
+.projects-st-container {
+    position: relative;
+    text-align: center;
 }
 
 .projects-doodle {
-    width: 5%;
     position: absolute;
-    top: 327.5%;
-    left: 50%;
+    top: 95%;
+    left: 50.5%;
+    width: 5vw;
+    z-index: 1;
 }
 
-.projects-header p {
-    text-align: center;
-    font-size: 18pt;
+.projects-st-container p {
+    font-size: 1.5vw;
+    z-index: 0;
 }
 
 .projects-result {
     max-height: 66%;
     width: 95%;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 0.5%;
     overflow-y: scroll;
 }
 
 .projects-info {
     font-family: Carlito, Tahoma;
-    font-size: 9pt;
+    font-size: 0.7vw;
     font-style: italic;
-    margin-top: 3%;
-    margin-left: 10px;
+    margin-top: 1%;
+    margin-left: 1%;
 }
 
 /* Mobile devices */
@@ -46,6 +51,17 @@
 
 /* Small screens and laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .projects-title {
+        font-size: 4vw;
+    }
+    .projects-info {
+        margin-top: 1.5%;
+        font-size: 1vw;
+    }
+    .projects-result {
+        max-height: 50%;
+        width: 100%;
+    }
 }
 
 /* Laptop L and extra large screen */

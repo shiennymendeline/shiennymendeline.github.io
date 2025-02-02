@@ -17,3 +17,11 @@ Design by freepik
 <a href="https://www.flaticon.com/free-icons/jquery" title="jquery icons">Jquery icons created by agustrisana - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/letter-m" title="letter m icons">Letter m icons created by Rohim - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/detail-oriented" title="detail oriented icons">Detail oriented icons created by blinixsolutions - Flaticon</a>
+
+Responsive resolution
+1920 × 1080
+1440 × 810
+1024 × 576
+768 × 432
+439 × 247
+395 × 222
