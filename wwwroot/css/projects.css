@@ -43,10 +43,35 @@
 
 /* Mobile devices */
 @media (max-width: 480px) {
+    .projects-title {
+        font-size: 15vw;
+    }
+
+    .projects-doodle {
+        width: 13vw;
+        left: 52%;
+    }
+
+    .projects-st-container p {
+        font-size: 4vw;
+    }
+
+    .projects-info {
+        font-size: 2.7vw;
+    }
 }
 
 /* Tablets */
 @media (min-width: 481px) and (max-width: 768px) {
+    .projects-result {
+        max-height: 45%;
+        width: 95%;
+        margin-top: 0;
+    }
+
+    .projects-info, .projects-info .mud-chip-content {
+        font-size: 2vh;
+    }
 }
 
 /* Small screens and laptops */

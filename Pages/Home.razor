@@ -13,10 +13,11 @@
                     <img src="images/profiles/@MyProfile.Profile.ProfileImg" />
                 </div>
                 <div class="profile-info flex-grow-1">
-                    <h1><i>@MyProfile.Profile.Greeting1,</i> <span class="profile-highlight">@MyProfile.Profile.Greeting2</span></h1>
-                    <img class="profile-mark" src="images/circle-dark.png" />
+                    <div class="profile-header">
+                        <img class="profile-mark" src="images/circle-dark.png" />
+                        <h1><i>@MyProfile.Profile.Greeting1,</i> <span class="profile-highlight">@MyProfile.Profile.Greeting2</span></h1>
+                    </div>
                     <div class="profile-desc">
-                        @* As a <span>Full Stack Developer</span> with expertise in <span>C# and .NET</span>, I am a <span>fast learner</span> who focuses on creating <span>clean, reusable code</span> and building <span>parameterized solutions</span> that improve system flexibility and maintainability *@
                         @((MarkupString)MyProfile.Profile.Summary)
                     </div>
                     <div class="profile-buttons d-flex justify-content-center align-items-center">
@@ -38,8 +39,10 @@
         <div class="container-maxvh aboutme-container d-flex justify-content-center align-items-center">
             <div class="aboutme-sub-container d-flex justify-content-center align-items-center">
                 <div class="aboutme-info flex-grow-1">
-                    <h1 class="aboutme-title">@MyProfile.Aboutme.Title</h1>
-                    <img class="aboutme-mark" src="images/circle-dark.png" />
+                    <div class="aboutme-header">
+                        <img src="images/circle-dark.png" />
+                        <h1 class="aboutme-title">@MyProfile.Aboutme.Title</h1>
+                    </div>
                     <div class="d-flex aboutme-highlight justify-content-center">
 
                         @foreach (var h in MyProfile.Aboutme.highlights)
@@ -63,8 +66,10 @@
     </section>
     <section id="skills">
         <div class="container-maxvh">
-            <h1 class="skills-title">@MyProfile.Skill.Title</h1>
-            <img class="skills-doodle" src="images/doodle.png" />
+            <div class="skills-header">
+                <img class="skills-doodle" src="images/doodle.png" />
+                <h1 class="skills-title">@MyProfile.Skill.Title</h1>
+            </div>
             <MudChipSet T="bool" Class="skills-chips d-flex justify-content-center">
                 @foreach (var cat in MyProfile.Skill.Categories)
                 {
@@ -81,7 +86,7 @@
                               ButtonText="@MyProfile.Skill.TextSearch"
                               OnClickButtonEvent="SetupSkillItems" />
             <div class="skills-results">
-                <div class="d-flex flex-wrap justify-content-center w-100">
+                <div class="d-flex flex-wrap justify-content-center">
                     @foreach (var s in SkillItems)
                     {
                         <BoxInfoSimple Name="@s.Name" Caption="@s.Level" ImgPath="@($"images/icon/{s.IconImg}")" />
